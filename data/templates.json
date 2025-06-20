@@ -1,0 +1,1955 @@
+{
+  "categories": [
+    {
+      "id": "development",
+      "name": "Development",
+      "description": "Development prompt templates for AI assistance",
+      "templates": [
+        {
+          "id": "generate-a-function-from-a-description",
+          "title": "Generate a Function from a Description",
+          "purpose": "To generate a complete function in a specified language based on a detailed description.",
+          "template": "Act as an expert [LANGUAGE] developer.\nYour task is to create a function that performs the following action: [DETAILED_DESCRIPTION_OF_FUNCTION].\n\n**Function Name:** `[FUNCTION_NAME]`\n**Parameters:**\n*   `[PARAM_1_NAME]`: ([PARAM_1_TYPE]) - [PARAM_1_DESCRIPTION]\n*   `[PARAM_2_NAME]`: ([PARAM_2_TYPE]) - [PARAM_2_DESCRIPTION]\n**Return Value:** ([RETURN_TYPE]) - [RETURN_VALUE_DESCRIPTION]\n\n**Constraints & Edge Cases:**\n*   [CONSTRAINT_1]\n*   [CONSTRAINT_2]\n*   Handle the case where [EDGE_CASE_DESCRIPTION].\n\nPlease provide the complete function code, including type hints and a brief explanation of the implementation.",
+          "category": "Development",
+          "categoryId": "development",
+          "usageInstructions": "Fill in the `[VARIABLES]` with the specifics of your function requirements. Be as detailed as possible in the description.",
+          "example": "Act as an expert Python developer.\nYour task is to create a function that performs the following action: Calculates the factorial of a non-negative integer.\n\n**Function Name:** `calculate_factorial`\n**Parameters:**\n*   `n`: (int) - The non-negative integer for which to calculate the factorial.\n**Return Value:** (int) - The factorial of the input integer `n`.\n\n**Constraints & Edge Cases:**\n*   The input `n` will always be a non-negative integer.\n*   The factorial of 0 is 1.\n*   Handle the case where the input is greater than 20 (return an error or handle large numbers).\n\nPlease provide the complete function code, including type hints and a brief explanation of the implementation.",
+          "customizationTips": "*   For more complex functions, add a \"Logic\" section detailing the step-by-step process.\n*   You can specify a particular coding style or library to use.",
+          "variables": [
+            "LANGUAGE",
+            "DETAILED_DESCRIPTION_OF_FUNCTION",
+            "FUNCTION_NAME",
+            "PARAM_1_NAME",
+            "PARAM_1_TYPE",
+            "PARAM_1_DESCRIPTION",
+            "PARAM_2_NAME",
+            "PARAM_2_TYPE",
+            "PARAM_2_DESCRIPTION",
+            "RETURN_TYPE",
+            "RETURN_VALUE_DESCRIPTION",
+            "CONSTRAINT_1",
+            "CONSTRAINT_2",
+            "EDGE_CASE_DESCRIPTION"
+          ],
+          "tags": [
+            "development",
+            "coding",
+            "generation"
+          ]
+        },
+        {
+          "id": "code-optimization-and-refactoring",
+          "title": "Code Optimization and Refactoring",
+          "purpose": "To optimize existing code for better performance, readability, or maintainability.",
+          "template": "I need you to act as a senior [LANGUAGE] developer and code optimizer.\n\n**Current Code:**\n```[LANGUAGE]\n[PASTE_EXISTING_CODE_HERE]",
+          "category": "Development",
+          "categoryId": "development",
+          "example": "I need you to act as a senior Python developer and code optimizer.\n\n**Current Code:**\n```python\ndef find_duplicates(lst):\n    duplicates = []\n    for i in range(len(lst)):\n        for j in range(i+1, len(lst)):\n            if lst[i] == lst[j] and lst[i] not in duplicates:\n                duplicates.append(lst[i])\n    return duplicates",
+          "customizationTips": "- Specify the current performance bottlenecks if known\n- Add specific coding standards or style guides to follow",
+          "variables": [
+            "LANGUAGE",
+            "PASTE_EXISTING_CODE_HERE"
+          ],
+          "tags": [
+            "development",
+            "coding",
+            "optimization",
+            "refactoring"
+          ]
+        },
+        {
+          "id": "algorithm-implementation",
+          "title": "Algorithm Implementation",
+          "purpose": "To implement a specific algorithm or data structure from scratch.",
+          "template": "Act as a computer science expert and implement the [ALGORITHM_NAME] algorithm in [LANGUAGE].\n\n**Algorithm Requirements:**\n- [REQUIREMENT_1]\n- [REQUIREMENT_2]\n- [REQUIREMENT_3]\n\n**Input:** [INPUT_DESCRIPTION]\n**Output:** [OUTPUT_DESCRIPTION]\n**Time Complexity Target:** [COMPLEXITY] (if applicable)\n**Space Complexity Target:** [COMPLEXITY] (if applicable)\n\n**Additional Requirements:**\n- Include comprehensive comments explaining each step\n- Add input validation and error handling\n- Provide test cases with expected outputs\n- Explain the algorithm's approach and why it works\n\n**Test Cases:**\n1. Input: [TEST_INPUT_1] → Expected Output: [TEST_OUTPUT_1]\n2. Input: [TEST_INPUT_2] → Expected Output: [TEST_OUTPUT_2]\n3. Edge Case: [EDGE_CASE] → Expected Output: [EDGE_OUTPUT]",
+          "category": "Development",
+          "categoryId": "development",
+          "variables": [
+            "ALGORITHM_NAME",
+            "LANGUAGE",
+            "REQUIREMENT_1",
+            "REQUIREMENT_2",
+            "REQUIREMENT_3",
+            "INPUT_DESCRIPTION",
+            "OUTPUT_DESCRIPTION",
+            "COMPLEXITY",
+            "TEST_INPUT_1",
+            "TEST_OUTPUT_1",
+            "TEST_INPUT_2",
+            "TEST_OUTPUT_2",
+            "EDGE_CASE",
+            "EDGE_OUTPUT"
+          ],
+          "tags": [
+            "development",
+            "structure"
+          ]
+        },
+        {
+          "id": "debug-error-analysis",
+          "title": "Debug Error Analysis",
+          "purpose": "To analyze and fix bugs or errors in existing code.",
+          "template": "I need help debugging a [LANGUAGE] issue. Act as an experienced debugging expert.\n\n**Problem Description:**\n[DETAILED_DESCRIPTION_OF_THE_PROBLEM]\n\n**Error Message/Symptoms:**",
+          "category": "Development",
+          "categoryId": "development",
+          "variables": [
+            "LANGUAGE",
+            "DETAILED_DESCRIPTION_OF_THE_PROBLEM"
+          ],
+          "tags": [
+            "development",
+            "coding",
+            "debugging",
+            "research"
+          ]
+        },
+        {
+          "id": "performance-troubleshooting",
+          "title": "Performance Troubleshooting",
+          "purpose": "To identify and resolve performance issues in code.",
+          "template": "I need help with performance analysis and optimization for my [LANGUAGE] application.\n\n**Performance Issue:**\n[DESCRIBE_PERFORMANCE_PROBLEM] (e.g., slow response times, high memory usage, CPU spikes)\n\n**Current Metrics:**\n- Response Time: [TIME]\n- Memory Usage: [MEMORY]\n- CPU Usage: [CPU]\n- [OTHER_METRICS]\n\n**Code to Analyze:**\n```[LANGUAGE]\n[PASTE_CODE_THAT_MIGHT_BE_CAUSING_ISSUES]",
+          "category": "Development",
+          "categoryId": "development",
+          "variables": [
+            "LANGUAGE",
+            "DESCRIBE_PERFORMANCE_PROBLEM",
+            "TIME",
+            "MEMORY",
+            "CPU",
+            "OTHER_METRICS",
+            "PASTE_CODE_THAT_MIGHT_BE_CAUSING_ISSUES"
+          ],
+          "tags": [
+            "development",
+            "coding",
+            "optimization"
+          ]
+        },
+        {
+          "id": "comprehensive-code-review",
+          "title": "Comprehensive Code Review",
+          "purpose": "To conduct a thorough code review focusing on multiple quality aspects.",
+          "template": "Please conduct a comprehensive code review of the following [LANGUAGE] code. Act as a senior developer performing a pull request review.\n\n**Code to Review:**\n```[LANGUAGE]\n[PASTE_CODE_HERE]",
+          "category": "Development",
+          "categoryId": "development",
+          "variables": [
+            "LANGUAGE",
+            "PASTE_CODE_HERE"
+          ],
+          "tags": [
+            "development",
+            "coding"
+          ]
+        },
+        {
+          "id": "generate-technical-documentation",
+          "title": "Generate Technical Documentation",
+          "purpose": "To create comprehensive technical documentation for code or systems.",
+          "template": "Create comprehensive technical documentation for the following [TYPE] (function/class/module/API/system).\n\n**Code/System to Document:**\n```[LANGUAGE]\n[PASTE_CODE_OR_DESCRIBE_SYSTEM]",
+          "category": "Development",
+          "categoryId": "development",
+          "variables": [
+            "TYPE",
+            "LANGUAGE",
+            "PASTE_CODE_OR_DESCRIBE_SYSTEM"
+          ],
+          "tags": [
+            "development",
+            "coding",
+            "documentation",
+            "generation"
+          ]
+        },
+        {
+          "id": "add-inline-code-comments",
+          "title": "Add Inline Code Comments",
+          "purpose": "To add clear, helpful comments to existing code.",
+          "template": "Please add comprehensive inline comments to the following [LANGUAGE] code. Focus on making the code self-documenting for developers who are [SKILL_LEVEL] with [LANGUAGE].\n\n**Code to Comment:**\n```[LANGUAGE]\n[PASTE_CODE_HERE]",
+          "category": "Development",
+          "categoryId": "development",
+          "variables": [
+            "LANGUAGE",
+            "SKILL_LEVEL",
+            "PASTE_CODE_HERE"
+          ],
+          "tags": [
+            "development",
+            "coding"
+          ]
+        }
+      ],
+      "count": 8
+    },
+    {
+      "id": "songwriting",
+      "name": "Songwriting",
+      "description": "Songwriting prompt templates for AI assistance",
+      "templates": [
+        {
+          "id": "genre-specific-lyric-generator",
+          "title": "Genre-Specific Lyric Generator",
+          "purpose": "To generate lyrics tailored to specific musical genres and themes.",
+          "template": "Act as a professional songwriter specializing in [GENRE] music. Write lyrics for a song with the following specifications:\n\n**Song Details:**\n- **Genre:** [GENRE] (e.g., pop, rock, country, hip-hop, folk, R&B)\n- **Theme/Topic:** [MAIN_THEME]\n- **Mood/Emotion:** [EMOTIONAL_TONE] (e.g., uplifting, melancholic, energetic, contemplative)\n- **Target Audience:** [AUDIENCE] (e.g., young adults, general audience, specific demographic)\n\n**Structure Requirements:**\n- **Song Length:** [APPROXIMATE_LENGTH] (e.g., 3-4 minutes, radio-friendly)\n- **Verse Count:** [NUMBER] verses\n- **Chorus:** [STYLE] (e.g., catchy and repetitive, anthemic, intimate)\n- **Bridge:** [INCLUDE/EXCLUDE] - [BRIDGE_STYLE] if included\n- **Other Sections:** [PRE_CHORUS/OUTRO/INTRO_REQUIREMENTS]\n\n**Lyrical Specifications:**\n- **Perspective:** [POINT_OF_VIEW] (1st person, 3rd person, storytelling)\n- **Rhyme Scheme:** [SCHEME] (ABAB, AABB, or flexible)\n- **Language Style:** [STYLE] (simple/accessible, poetic/metaphorical, conversational, edgy)\n- **Key Message:** [CORE_MESSAGE_OR_STORY]\n\n**Avoid:**\n- [CLICHES_TO_AVOID]\n- [TOPICS_TO_AVOID]\n- [LANGUAGE_RESTRICTIONS]\n\nPlease provide complete lyrics with clear section labels and suggest a potential title.",
+          "category": "Songwriting",
+          "categoryId": "songwriting",
+          "example": "Act as a professional songwriter specializing in indie folk music. Write lyrics for a song with the following specifications:\n\n**Song Details:**\n- **Genre:** Indie folk\n- **Theme/Topic:** Finding peace after a difficult breakup\n- **Mood/Emotion:** Bittersweet but ultimately hopeful\n- **Target Audience:** Young adults (20-35)\n\n**Structure Requirements:**\n- **Song Length:** 3-4 minutes, radio-friendly\n- **Verse Count:** 2 verses\n- **Chorus:** Intimate but memorable, not too anthemic\n- **Bridge:** Include - reflective and introspective\n- **Other Sections:** Simple intro, gentle outro\n\n**Lyrical Specifications:**\n- **Perspective:** 1st person, personal experience\n- **Rhyme Scheme:** Flexible, prioritize natural flow over strict rhyming\n- **Language Style:** Poetic but accessible, nature metaphors welcome\n- **Key Message:** Growth comes from letting go, finding strength in solitude\n\n**Avoid:**\n- Cliché breakup lines (\"you broke my heart\", \"love is blind\")\n- Overly dramatic or bitter language\n- References to specific technology or pop culture\n\nPlease provide complete lyrics with clear section labels and suggest a potential title.",
+          "variables": [
+            "GENRE",
+            "MAIN_THEME",
+            "EMOTIONAL_TONE",
+            "AUDIENCE",
+            "APPROXIMATE_LENGTH",
+            "NUMBER",
+            "STYLE",
+            "BRIDGE_STYLE",
+            "POINT_OF_VIEW",
+            "SCHEME",
+            "CORE_MESSAGE_OR_STORY",
+            "CLICHES_TO_AVOID",
+            "TOPICS_TO_AVOID",
+            "LANGUAGE_RESTRICTIONS"
+          ],
+          "tags": [
+            "songwriting",
+            "lyrics",
+            "genre",
+            "generation"
+          ]
+        },
+        {
+          "id": "lyric-improvement-and-refinement",
+          "title": "Lyric Improvement and Refinement",
+          "purpose": "To improve existing lyrics with specific focus areas.",
+          "template": "I need help refining and improving my song lyrics. Act as an experienced songwriter and lyric coach.\n\n**Current Lyrics:**",
+          "category": "Songwriting",
+          "categoryId": "songwriting",
+          "variables": [],
+          "tags": [
+            "songwriting",
+            "refactoring",
+            "lyrics"
+          ]
+        },
+        {
+          "id": "song-structure-planner",
+          "title": "Song Structure Planner",
+          "purpose": "To plan the overall structure and arrangement of a song.",
+          "template": "Help me plan the structure and arrangement for a [GENRE] song. Act as a music producer and songwriter.\n\n**Song Concept:**\n- **Title:** [WORKING_TITLE]\n- **Genre:** [GENRE]\n- **Tempo:** [BPM] BPM (or [TEMPO_DESCRIPTION] if unsure)\n- **Key:** [KEY] (or suggest appropriate key)\n- **Duration Target:** [LENGTH]\n- **Mood/Energy:** [ENERGY_DESCRIPTION]\n\n**Story/Theme:**\n[BRIEF_DESCRIPTION_OF_SONG_THEME_OR_STORY]\n\n**Arrangement Preferences:**\n- **Instrumentation:** [DESIRED_INSTRUMENTS]\n- **Vocal Style:** [VOCAL_APPROACH]\n- **Dynamics:** [DYNAMIC_RANGE] (e.g., consistent energy, builds from quiet to loud)\n- **Commercial Goals:** [RADIO_FRIENDLY/ARTISTIC/etc.]\n\n**Specific Requirements:**\n- [REQUIREMENT_1] (e.g., needs a strong hook within first 30 seconds)\n- [REQUIREMENT_2] (e.g., bridge should contrast significantly from verses)\n- [REQUIREMENT_3]\n\nPlease provide:\n1. **Recommended song structure** (with timing estimates)\n2. **Section-by-section arrangement notes** (instrumentation, dynamics, vocal approach)\n3. **Chord progression suggestions** for each section\n4. **Production tips** specific to the genre\n5. **Hook and catchiness strategies**",
+          "category": "Songwriting",
+          "categoryId": "songwriting",
+          "variables": [
+            "GENRE",
+            "WORKING_TITLE",
+            "BPM",
+            "TEMPO_DESCRIPTION",
+            "KEY",
+            "LENGTH",
+            "ENERGY_DESCRIPTION",
+            "BRIEF_DESCRIPTION_OF_SONG_THEME_OR_STORY",
+            "DESIRED_INSTRUMENTS",
+            "VOCAL_APPROACH",
+            "DYNAMIC_RANGE",
+            "REQUIREMENT_1",
+            "REQUIREMENT_2",
+            "REQUIREMENT_3"
+          ],
+          "tags": [
+            "songwriting",
+            "lyrics",
+            "structure",
+            "planning"
+          ]
+        },
+        {
+          "id": "chord-progression-generator",
+          "title": "Chord Progression Generator",
+          "purpose": "To generate chord progressions tailored to specific moods and genres.",
+          "template": "Create chord progressions for a [GENRE] song. Act as a music theory expert and composer.\n\n**Musical Requirements:**\n- **Key:** [KEY] (major/minor)\n- **Genre:** [GENRE]\n- **Mood:** [MOOD_DESCRIPTION]\n- **Tempo:** [TEMPO] (fast/medium/slow or specific BPM)\n- **Complexity Level:** [BEGINNER/INTERMEDIATE/ADVANCED]\n\n**Song Sections Needed:**\n- [ ] Verse progression\n- [ ] Chorus progression  \n- [ ] Bridge progression\n- [ ] Pre-chorus (if applicable)\n- [ ] Intro/Outro variations\n\n**Preferences:**\n- **Chord Types:** [TRIADS_ONLY/SEVENTH_CHORDS/EXTENSIONS_WELCOME]\n- **Movement Style:** [SMOOTH_VOICE_LEADING/DRAMATIC_JUMPS/MIXED]\n- **Borrowing:** [ALLOW_BORROWED_CHORDS] from related keys\n- **Modulation:** [INCLUDE/AVOID] key changes\n\n**Inspiration/Reference:**\n- Chord progressions similar to: [REFERENCE_SONGS] (optional)\n- Avoid progressions that sound like: [SONGS_TO_AVOID] (optional)\n\nPlease provide:\n1. **Chord progressions** for each section (both Roman numerals and chord names)\n2. **Strumming/rhythm suggestions** appropriate for the genre\n3. **Voice leading notes** for smooth transitions\n4. **Alternative variations** for added interest\n5. **Capo/fingering suggestions** if acoustic guitar is involved",
+          "category": "Songwriting",
+          "categoryId": "songwriting",
+          "variables": [
+            "GENRE",
+            "KEY",
+            "MOOD_DESCRIPTION",
+            "TEMPO",
+            "ALLOW_BORROWED_CHORDS",
+            "REFERENCE_SONGS",
+            "SONGS_TO_AVOID"
+          ],
+          "tags": [
+            "songwriting",
+            "genre",
+            "generation"
+          ]
+        }
+      ],
+      "count": 4
+    },
+    {
+      "id": "creative-writing",
+      "name": "Creative Writing",
+      "description": "Creative Writing prompt templates for AI assistance",
+      "templates": [
+        {
+          "id": "story-concept-generator",
+          "title": "Story Concept Generator",
+          "purpose": "To generate complete story concepts with plot, characters, and setting.",
+          "template": "Create a compelling story concept for a [GENRE] [FORMAT]. Act as a creative writing expert and story developer.\n\n**Story Parameters:**\n- **Genre:** [GENRE] (e.g., mystery, sci-fi, romance, historical fiction, fantasy)\n- **Format:** [FORMAT] (short story, novella, novel, screenplay, etc.)\n- **Target Length:** [LENGTH] (word count or page count)\n- **Target Audience:** [AUDIENCE] (YA, adult, children, specific demographic)\n- **Tone:** [TONE] (dark, humorous, serious, whimsical, gritty)\n\n**Theme/Message Requirements:**\n- **Central Theme:** [THEME] (optional - e.g., redemption, coming of age, social justice)\n- **Message/Takeaway:** [MESSAGE] (what should readers learn or feel?)\n\n**Setting Preferences:**\n- **Time Period:** [TIME] (contemporary, historical period, future, fantasy time)\n- **Location:** [SETTING] (urban, rural, fictional world, specific real location)\n- **World-building Complexity:** [SIMPLE/MODERATE/EXTENSIVE]\n\n**Story Elements to Include:**\n- [REQUIRED_ELEMENT_1] (e.g., must include a mystery, romantic subplot, etc.)\n- [REQUIRED_ELEMENT_2]\n- [REQUIRED_ELEMENT_3]\n\n**Constraints/Restrictions:**\n- Avoid: [ELEMENTS_TO_AVOID]\n- Content rating: [RATING] (G, PG, PG-13, R, etc.)\n\nPlease provide:\n1. **Compelling logline** (1-2 sentences)\n2. **Main plot outline** (beginning, middle, end)\n3. **Primary characters** (protagonist, antagonist, key supporting characters)\n4. **Setting and world details**\n5. **Central conflict and stakes**\n6. **Unique hook** (what makes this story stand out)\n7. **Potential subplots**",
+          "category": "Creative Writing",
+          "categoryId": "creative-writing",
+          "variables": [
+            "GENRE",
+            "FORMAT",
+            "LENGTH",
+            "AUDIENCE",
+            "TONE",
+            "THEME",
+            "MESSAGE",
+            "TIME",
+            "SETTING",
+            "REQUIRED_ELEMENT_1",
+            "REQUIRED_ELEMENT_2",
+            "REQUIRED_ELEMENT_3",
+            "ELEMENTS_TO_AVOID",
+            "RATING"
+          ],
+          "tags": [
+            "creative writing",
+            "storytelling",
+            "characters",
+            "scenes",
+            "explanation",
+            "generation"
+          ]
+        },
+        {
+          "id": "plot-problem-solver",
+          "title": "Plot Problem Solver",
+          "purpose": "To solve specific plotting issues or story problems.",
+          "template": "I need help solving a plotting issue in my [GENRE] story. Act as a story consultant and plot doctor.\n\n**Current Story Context:**\n[BRIEF_SUMMARY_OF_YOUR_STORY_SO_FAR]\n\n**The Problem:**\n[DETAILED_DESCRIPTION_OF_THE_PLOTTING_ISSUE]\n\n**Story Details:**\n- **Genre:** [GENRE]\n- **Target Audience:** [AUDIENCE] \n- **Story Length:** [LENGTH]\n- **Point of View:** [POV]\n- **Tone:** [TONE]\n\n**Key Characters Involved:**\n- **Protagonist:** [BRIEF_DESCRIPTION]\n- **Antagonist:** [BRIEF_DESCRIPTION]\n- **Others:** [OTHER_RELEVANT_CHARACTERS]\n\n**Constraints:**\n- Must maintain: [ELEMENTS_THAT_CANNOT_CHANGE]\n- Story structure: [ACTS/CHAPTERS_ESTABLISHED]\n- Established character motivations: [KEY_MOTIVATIONS]\n\n**Potential Solutions I've Considered:**\n1. [SOLUTION_ATTEMPT_1] - [WHY_IT_DOESN'T_WORK]\n2. [SOLUTION_ATTEMPT_2] - [WHY_IT_DOESN'T_WORK]\n\nPlease provide:\n1. **Analysis of the core issue**\n2. **3-5 potential solutions** with pros and cons\n3. **Recommended approach** and reasoning\n4. **Implementation strategy** (how to execute the solution)\n5. **Potential ripple effects** on other story elements",
+          "category": "Creative Writing",
+          "categoryId": "creative-writing",
+          "variables": [
+            "GENRE",
+            "BRIEF_SUMMARY_OF_YOUR_STORY_SO_FAR",
+            "DETAILED_DESCRIPTION_OF_THE_PLOTTING_ISSUE",
+            "AUDIENCE",
+            "LENGTH",
+            "POV",
+            "TONE",
+            "BRIEF_DESCRIPTION",
+            "OTHER_RELEVANT_CHARACTERS",
+            "ELEMENTS_THAT_CANNOT_CHANGE",
+            "KEY_MOTIVATIONS",
+            "SOLUTION_ATTEMPT_1",
+            "SOLUTION_ATTEMPT_2"
+          ],
+          "tags": [
+            "creative writing",
+            "storytelling"
+          ]
+        },
+        {
+          "id": "character-development-deep-dive",
+          "title": "Character Development Deep Dive",
+          "purpose": "To create rich, multi-dimensional characters with depth and authenticity.",
+          "template": "Create a detailed character profile for my [GENRE] story. Act as a character development specialist.\n\n**Basic Character Information:**\n- **Role in Story:** [PROTAGONIST/ANTAGONIST/SUPPORTING/etc.]\n- **Age:** [AGE] or [AGE_RANGE]\n- **Gender:** [GENDER]\n- **Occupation:** [JOB] (current or most relevant)\n\n**Story Context:**\n- **Genre:** [GENRE]\n- **Setting:** [TIME_PERIOD_AND_LOCATION]\n- **Story Theme:** [MAIN_THEME]\n- **Character's Role in Theme:** [HOW_CHARACTER_RELATES_TO_THEME]\n\n**Character Requirements:**\n- **Personality Archetype:** [ARCHETYPE] (mentor, rebel, innocent, etc.) - optional\n- **Primary Goal:** [WHAT_CHARACTER_WANTS_MOST]\n- **Greatest Fear:** [BIGGEST_FEAR]\n- **Fatal Flaw:** [CHARACTER_WEAKNESS]\n- **Character Arc:** [HOW_SHOULD_CHARACTER_CHANGE] from beginning to end\n\n**Relationships:**\n- **Key Relationships:** [IMPORTANT_PEOPLE_IN_CHARACTER'S_LIFE]\n- **Conflict Sources:** [WHO_OR_WHAT_OPPOSES_CHARACTER]\n\n**Specific Traits Needed:**\n- [REQUIRED_TRAIT_1] (e.g., must be skilled in martial arts)\n- [REQUIRED_TRAIT_2] (e.g., has a secret that drives the plot)\n- [REQUIRED_TRAIT_3]\n\nPlease provide:\n1. **Complete character profile** including backstory, personality, appearance\n2. **Psychological depth** - motivations, fears, contradictions\n3. **Speaking style and mannerisms**\n4. **Character arc progression** throughout the story\n5. **Relationship dynamics** with other characters\n6. **Unique details** that make the character memorable\n7. **Potential dialogue samples** in the character's voice",
+          "category": "Creative Writing",
+          "categoryId": "creative-writing",
+          "variables": [
+            "GENRE",
+            "AGE",
+            "AGE_RANGE",
+            "GENDER",
+            "JOB",
+            "TIME_PERIOD_AND_LOCATION",
+            "MAIN_THEME",
+            "HOW_CHARACTER_RELATES_TO_THEME",
+            "ARCHETYPE",
+            "WHAT_CHARACTER_WANTS_MOST",
+            "BIGGEST_FEAR",
+            "CHARACTER_WEAKNESS",
+            "HOW_SHOULD_CHARACTER_CHANGE",
+            "WHO_OR_WHAT_OPPOSES_CHARACTER",
+            "REQUIRED_TRAIT_1",
+            "REQUIRED_TRAIT_2",
+            "REQUIRED_TRAIT_3"
+          ],
+          "tags": [
+            "creative writing",
+            "characters",
+            "generation"
+          ]
+        }
+      ],
+      "count": 3
+    },
+    {
+      "id": "business-project",
+      "name": "Business/Project",
+      "description": "Business/Project prompt templates for AI assistance",
+      "templates": [
+        {
+          "id": "project-scope-and-planning",
+          "title": "Project Scope and Planning",
+          "purpose": "To create comprehensive project plans with clear scope and deliverables.",
+          "template": "Help me create a comprehensive project plan. Act as an experienced project manager and business analyst.\n\n**Project Overview:**\n- **Project Name:** [PROJECT_NAME]\n- **Project Type:** [TYPE] (software development, marketing campaign, product launch, etc.)\n- **Duration:** [ESTIMATED_TIMELINE]\n- **Budget Range:** [BUDGET] (if applicable)\n- **Team Size:** [TEAM_SIZE] people\n\n**Business Context:**\n- **Primary Goal:** [MAIN_OBJECTIVE]\n- **Success Metrics:** [HOW_SUCCESS_WILL_BE_MEASURED]\n- **Target Audience/Users:** [WHO_WILL_BENEFIT]\n- **Business Value:** [WHY_THIS_PROJECT_MATTERS]\n\n**Project Requirements:**\n- **Must Have Features/Deliverables:**\n  - [REQUIREMENT_1]\n  - [REQUIREMENT_2]\n  - [REQUIREMENT_3]\n- **Nice to Have Features:**\n  - [NICE_TO_HAVE_1]\n  - [NICE_TO_HAVE_2]\n\n**Constraints:**\n- **Timeline Constraints:** [DEADLINES_OR_TIME_LIMITS]\n- **Budget Constraints:** [FINANCIAL_LIMITATIONS]\n- **Resource Constraints:** [TEAM_OR_SKILL_LIMITATIONS]\n- **Technical Constraints:** [TECHNOLOGY_OR_PLATFORM_LIMITATIONS]\n\n**Stakeholders:**\n- **Project Sponsor:** [SPONSOR_ROLE]\n- **End Users:** [USER_DESCRIPTION]\n- **Other Stakeholders:** [OTHER_INTERESTED_PARTIES]\n\nPlease provide:\n1. **Detailed project scope** with clear boundaries\n2. **Work breakdown structure** (main phases and tasks)\n3. **Timeline and milestones** with dependencies\n4. **Resource allocation** and team roles\n5. **Risk assessment** and mitigation strategies\n6. **Communication plan** and reporting structure\n7. **Success criteria** and acceptance criteria",
+          "category": "Business/Project",
+          "categoryId": "business-project",
+          "variables": [
+            "PROJECT_NAME",
+            "TYPE",
+            "ESTIMATED_TIMELINE",
+            "BUDGET",
+            "TEAM_SIZE",
+            "MAIN_OBJECTIVE",
+            "HOW_SUCCESS_WILL_BE_MEASURED",
+            "WHO_WILL_BENEFIT",
+            "WHY_THIS_PROJECT_MATTERS",
+            "REQUIREMENT_1",
+            "REQUIREMENT_2",
+            "REQUIREMENT_3",
+            "NICE_TO_HAVE_1",
+            "NICE_TO_HAVE_2",
+            "DEADLINES_OR_TIME_LIMITS",
+            "FINANCIAL_LIMITATIONS",
+            "TEAM_OR_SKILL_LIMITATIONS",
+            "TECHNOLOGY_OR_PLATFORM_LIMITATIONS",
+            "SPONSOR_ROLE",
+            "USER_DESCRIPTION",
+            "OTHER_INTERESTED_PARTIES"
+          ],
+          "tags": [
+            "business/project",
+            "planning",
+            "generation"
+          ]
+        },
+        {
+          "id": "user-story-creation",
+          "title": "User Story Creation",
+          "purpose": "To create detailed user stories with acceptance criteria for development projects.",
+          "template": "Create detailed user stories for the following feature. Act as a product manager and business analyst.\n\n**Feature Overview:**\n- **Feature Name:** [FEATURE_NAME]\n- **Product/System:** [PRODUCT_NAME]\n- **Feature Priority:** [HIGH/MEDIUM/LOW]\n- **Target Release:** [RELEASE_VERSION_OR_DATE]\n\n**User Context:**\n- **Primary User Type:** [USER_ROLE] (e.g., end customer, admin, content creator)\n- **User Skill Level:** [TECHNICAL_PROFICIENCY]\n- **Usage Context:** [WHEN_AND_WHERE_USED]\n- **User Goals:** [WHAT_USER_WANTS_TO_ACCOMPLISH]\n\n**Functional Requirements:**\n- [REQUIREMENT_1]\n- [REQUIREMENT_2]\n- [REQUIREMENT_3]\n\n**Business Requirements:**\n- **Business Value:** [WHY_THIS_FEATURE_IS_NEEDED]\n- **Success Metrics:** [HOW_SUCCESS_WILL_BE_MEASURED]\n- **Business Rules:** [ANY_CONSTRAINTS_OR_RULES]\n\n**Technical Context:**\n- **Platform:** [WEB/MOBILE/DESKTOP/API]\n- **Integration Points:** [SYSTEMS_TO_INTEGRATE_WITH]\n- **Performance Requirements:** [SPEED_OR_SCALE_REQUIREMENTS]\n\n**Design Constraints:**\n- [DESIGN_CONSTRAINT_1]\n- [DESIGN_CONSTRAINT_2]\n\nPlease provide:\n1. **Epic-level user story** (high-level feature description)\n2. **Detailed user stories** in \"As a [user], I want [goal] so that [benefit]\" format\n3. **Acceptance criteria** for each story (Given/When/Then format)\n4. **Edge cases and error scenarios**\n5. **Dependencies** on other features or systems\n6. **Definition of Done** checklist\n7. **Testing scenarios** (positive and negative cases)",
+          "category": "Business/Project",
+          "categoryId": "business-project",
+          "variables": [
+            "FEATURE_NAME",
+            "PRODUCT_NAME",
+            "RELEASE_VERSION_OR_DATE",
+            "USER_ROLE",
+            "TECHNICAL_PROFICIENCY",
+            "WHEN_AND_WHERE_USED",
+            "WHAT_USER_WANTS_TO_ACCOMPLISH",
+            "REQUIREMENT_1",
+            "REQUIREMENT_2",
+            "REQUIREMENT_3",
+            "WHY_THIS_FEATURE_IS_NEEDED",
+            "HOW_SUCCESS_WILL_BE_MEASURED",
+            "ANY_CONSTRAINTS_OR_RULES",
+            "SYSTEMS_TO_INTEGRATE_WITH",
+            "SPEED_OR_SCALE_REQUIREMENTS",
+            "DESIGN_CONSTRAINT_1",
+            "DESIGN_CONSTRAINT_2"
+          ],
+          "tags": [
+            "business/project",
+            "storytelling",
+            "planning",
+            "generation"
+          ]
+        }
+      ],
+      "count": 2
+    },
+    {
+      "id": "learning-and-analysis",
+      "name": "Learning and Analysis",
+      "description": "Learning and Analysis prompt templates for AI assistance",
+      "templates": [
+        {
+          "id": "comprehensive-research-brief",
+          "title": "Comprehensive Research Brief",
+          "purpose": "To create structured research plans for investigating topics or problems.",
+          "template": "Create a comprehensive research plan for investigating [RESEARCH_TOPIC]. Act as a research methodologist and subject matter expert.\n\n**Research Objective:**\n- **Primary Question:** [MAIN_RESEARCH_QUESTION]\n- **Secondary Questions:**\n  - [SECONDARY_QUESTION_1]\n  - [SECONDARY_QUESTION_2]\n  - [SECONDARY_QUESTION_3]\n\n**Research Context:**\n- **Background:** [WHAT_WE_ALREADY_KNOW]\n- **Purpose:** [WHY_THIS_RESEARCH_IS_NEEDED]\n- **Target Audience:** [WHO_WILL_USE_THE_RESULTS]\n- **Deadline:** [WHEN_RESULTS_ARE_NEEDED]\n\n**Scope and Constraints:**\n- **Scope:** [WHAT_IS_INCLUDED_IN_THE_RESEARCH]\n- **Out of Scope:** [WHAT_IS_EXPLICITLY_EXCLUDED]\n- **Resource Constraints:** [TIME/BUDGET/ACCESS_LIMITATIONS]\n- **Quality Requirements:** [DEPTH_AND_RELIABILITY_NEEDED]\n\n**Research Focus Areas:**\n- [FOCUS_AREA_1] - [WHY_IMPORTANT]\n- [FOCUS_AREA_2] - [WHY_IMPORTANT]\n- [FOCUS_AREA_3] - [WHY_IMPORTANT]\n\n**Preferred Sources:**\n- **Primary Sources:** [ORIGINAL_DATA_SOURCES]\n- **Secondary Sources:** [ANALYSIS_AND_COMMENTARY]\n- **Source Credibility Requirements:** [QUALITY_STANDARDS]\n\nPlease provide:\n1. **Detailed research methodology** and approach\n2. **Source identification strategy** (where to find information)\n3. **Research timeline** with milestones\n4. **Data collection framework** (what to look for)\n5. **Analysis framework** (how to evaluate findings)\n6. **Quality assurance** methods for reliability\n7. **Deliverable structure** (how to present findings)\n8. **Potential challenges** and mitigation strategies",
+          "category": "Learning and Analysis",
+          "categoryId": "learning-and-analysis",
+          "variables": [
+            "RESEARCH_TOPIC",
+            "MAIN_RESEARCH_QUESTION",
+            "SECONDARY_QUESTION_1",
+            "SECONDARY_QUESTION_2",
+            "SECONDARY_QUESTION_3",
+            "WHAT_WE_ALREADY_KNOW",
+            "WHY_THIS_RESEARCH_IS_NEEDED",
+            "WHO_WILL_USE_THE_RESULTS",
+            "WHEN_RESULTS_ARE_NEEDED",
+            "WHAT_IS_INCLUDED_IN_THE_RESEARCH",
+            "WHAT_IS_EXPLICITLY_EXCLUDED",
+            "DEPTH_AND_RELIABILITY_NEEDED",
+            "FOCUS_AREA_1",
+            "WHY_IMPORTANT",
+            "FOCUS_AREA_2",
+            "FOCUS_AREA_3",
+            "ORIGINAL_DATA_SOURCES",
+            "ANALYSIS_AND_COMMENTARY",
+            "QUALITY_STANDARDS"
+          ],
+          "tags": [
+            "learning and analysis",
+            "structure",
+            "planning",
+            "research",
+            "generation"
+          ]
+        },
+        {
+          "id": "educational-content-creator",
+          "title": "Educational Content Creator",
+          "purpose": "To create clear, educational explanations of complex concepts.",
+          "template": "Create educational content explaining [CONCEPT/TOPIC]. Act as an expert educator and curriculum designer.\n\n**Content Specifications:**\n- **Topic:** [SPECIFIC_CONCEPT_OR_SKILL]\n- **Target Audience:** [AUDIENCE_DESCRIPTION_AND_SKILL_LEVEL]\n- **Content Format:** [TUTORIAL/EXPLANATION/GUIDE/COURSE_MODULE]\n- **Content Length:** [WORD_COUNT_OR_TIME_ESTIMATE]\n- **Delivery Medium:** [WRITTEN/VIDEO_SCRIPT/INTERACTIVE/etc.]\n\n**Learning Objectives:**\nAfter completing this content, learners should be able to:\n- [LEARNING_OBJECTIVE_1]\n- [LEARNING_OBJECTIVE_2]\n- [LEARNING_OBJECTIVE_3]\n\n**Audience Analysis:**\n- **Prior Knowledge:** [WHAT_AUDIENCE_ALREADY_KNOWS]\n- **Knowledge Gaps:** [WHAT_THEY_DON'T_KNOW]\n- **Learning Style Preferences:** [VISUAL/AUDITORY/HANDS_ON/etc.]\n- **Common Misconceptions:** [TYPICAL_MISUNDERSTANDINGS]\n\n**Content Requirements:**\n- **Complexity Level:** [BEGINNER/INTERMEDIATE/ADVANCED]\n- **Practical Application:** [HOW_CONCEPT_IS_USED_IN_REAL_WORLD]\n- **Examples Needed:** [TYPES_OF_EXAMPLES_TO_INCLUDE]\n- **Interactive Elements:** [EXERCISES/QUIZZES/ACTIVITIES_NEEDED]\n\n**Constraints:**\n- **Time Constraints:** [LEARNING_TIME_LIMITATIONS]\n- **Prerequisites:** [REQUIRED_PRIOR_KNOWLEDGE]\n- **Accessibility:** [SPECIAL_ACCESSIBILITY_NEEDS]\n\nPlease provide:\n1. **Content outline** with logical progression\n2. **Detailed explanation** with clear, simple language\n3. **Relevant examples** and analogies\n4. **Practical exercises** or applications\n5. **Assessment questions** to check understanding\n6. **Common pitfalls** and how to avoid them\n7. **Additional resources** for deeper learning\n8. **Summary** and key takeaways",
+          "category": "Learning and Analysis",
+          "categoryId": "learning-and-analysis",
+          "variables": [
+            "SPECIFIC_CONCEPT_OR_SKILL",
+            "AUDIENCE_DESCRIPTION_AND_SKILL_LEVEL",
+            "WORD_COUNT_OR_TIME_ESTIMATE",
+            "LEARNING_OBJECTIVE_1",
+            "LEARNING_OBJECTIVE_2",
+            "LEARNING_OBJECTIVE_3",
+            "WHAT_AUDIENCE_ALREADY_KNOWS",
+            "TYPICAL_MISUNDERSTANDINGS",
+            "HOW_CONCEPT_IS_USED_IN_REAL_WORLD",
+            "TYPES_OF_EXAMPLES_TO_INCLUDE",
+            "LEARNING_TIME_LIMITATIONS",
+            "REQUIRED_PRIOR_KNOWLEDGE",
+            "SPECIAL_ACCESSIBILITY_NEEDS"
+          ],
+          "tags": [
+            "learning and analysis",
+            "planning",
+            "learning",
+            "explanation",
+            "generation"
+          ]
+        },
+        {
+          "id": "custom-prompt-generator",
+          "title": "Custom Prompt Generator",
+          "purpose": "To create specialized prompts for specific tasks or domains.",
+          "template": "Create a custom prompt template for [SPECIFIC_TASK_OR_DOMAIN]. Act as a prompt engineering expert.\n\n**Task Description:**\n[DETAILED_DESCRIPTION_OF_THE_TASK_THE_PROMPT_SHOULD_ACCOMPLISH]\n\n**Use Case Context:**\n- **Domain:** [FIELD_OR_INDUSTRY] (e.g., marketing, education, software development)\n- **User Type:** [WHO_WILL_USE_THIS_PROMPT] (skill level, role, context)\n- **Frequency of Use:** [HOW_OFTEN_PROMPT_WILL_BE_USED]\n- **Output Requirements:** [WHAT_TYPE_OF_OUTPUT_IS_EXPECTED]\n\n**Prompt Requirements:**\n- **AI Role:** [WHAT_PERSONA_SHOULD_AI_ADOPT]\n- **Input Variables:** [WHAT_INFORMATION_USER_NEEDS_TO_PROVIDE]\n- **Output Format:** [STRUCTURE_OF_DESIRED_RESPONSE]\n- **Quality Standards:** [CRITERIA_FOR_GOOD_OUTPUT]\n\n**Constraints:**\n- **Length Limitations:** [MAX_PROMPT_LENGTH_OR_OUTPUT_LENGTH]\n- **Complexity Level:** [SIMPLE/MODERATE/COMPLEX]\n- **Special Requirements:** [UNIQUE_NEEDS_OR_CONSTRAINTS]\n\n**Examples of Good Outputs:**\n[PROVIDE_1_2_EXAMPLES_OF_DESIRED_RESULTS]\n\nPlease provide:\n1. **Complete prompt template** with clear [VARIABLE] placeholders\n2. **Usage instructions** for filling in variables\n3. **Example implementation** with variables filled in\n4. **Expected output description**\n5. **Customization tips** for different use cases\n6. **Common pitfalls** to avoid when using the prompt\n7. **Variations** for different scenarios or skill levels",
+          "category": "Learning and Analysis",
+          "categoryId": "learning-and-analysis",
+          "variables": [
+            "SPECIFIC_TASK_OR_DOMAIN",
+            "DETAILED_DESCRIPTION_OF_THE_TASK_THE_PROMPT_SHOULD_ACCOMPLISH",
+            "FIELD_OR_INDUSTRY",
+            "WHO_WILL_USE_THIS_PROMPT",
+            "HOW_OFTEN_PROMPT_WILL_BE_USED",
+            "WHAT_TYPE_OF_OUTPUT_IS_EXPECTED",
+            "WHAT_PERSONA_SHOULD_AI_ADOPT",
+            "WHAT_INFORMATION_USER_NEEDS_TO_PROVIDE",
+            "STRUCTURE_OF_DESIRED_RESPONSE",
+            "CRITERIA_FOR_GOOD_OUTPUT",
+            "MAX_PROMPT_LENGTH_OR_OUTPUT_LENGTH",
+            "UNIQUE_NEEDS_OR_CONSTRAINTS",
+            "PROVIDE_1_2_EXAMPLES_OF_DESIRED_RESULTS",
+            "VARIABLE"
+          ],
+          "tags": [
+            "learning and analysis",
+            "meta",
+            "generation"
+          ]
+        },
+        {
+          "id": "prompt-optimization-and-improvement",
+          "title": "Prompt Optimization and Improvement",
+          "purpose": "To analyze and improve existing prompts for better results.",
+          "template": "Analyze and improve the following prompt. Act as a prompt engineering specialist.\n\n**Current Prompt:**",
+          "category": "Learning and Analysis",
+          "categoryId": "learning-and-analysis",
+          "variables": [],
+          "tags": [
+            "learning and analysis",
+            "refactoring",
+            "meta"
+          ]
+        },
+        {
+          "id": "architecture-and-system-design",
+          "title": "Architecture and System Design",
+          "purpose": "To design software architecture and system components.",
+          "template": "Design a software architecture for [SYSTEM_TYPE]. Act as a senior software architect.\n\n**System Requirements:**\n- **System Purpose:** [WHAT_THE_SYSTEM_DOES]\n- **Scale:** [EXPECTED_USERS/LOAD/DATA_VOLUME]\n- **Performance Requirements:** [SPEED/THROUGHPUT/LATENCY_NEEDS]\n- **Availability Requirements:** [UPTIME_EXPECTATIONS]\n- **Security Requirements:** [SECURITY_LEVEL_AND_COMPLIANCE]\n\n**Technical Constraints:**\n- **Technology Stack:** [PREFERRED_OR_REQUIRED_TECHNOLOGIES]\n- **Platform:** [CLOUD/ON_PREMISE/HYBRID]\n- **Budget Constraints:** [COST_LIMITATIONS]\n- **Team Expertise:** [TEAM_SKILL_LEVELS]\n- **Timeline:** [DEVELOPMENT_TIMELINE]\n\n**Functional Requirements:**\n- [CORE_FEATURE_1]\n- [CORE_FEATURE_2]\n- [CORE_FEATURE_3]\n- [INTEGRATION_REQUIREMENTS]\n\n**Non-Functional Requirements:**\n- **Scalability:** [GROWTH_EXPECTATIONS]\n- **Maintainability:** [MAINTENANCE_CONSIDERATIONS]\n- **Reliability:** [ERROR_TOLERANCE]\n- **Monitoring:** [OBSERVABILITY_NEEDS]\n\nPlease provide:\n1. **High-level architecture diagram** (described in text)\n2. **Component breakdown** with responsibilities\n3. **Data flow** and interaction patterns\n4. **Technology recommendations** with justifications\n5. **Scalability strategy** for future growth\n6. **Security architecture** and considerations\n7. **Deployment strategy** and infrastructure needs\n8. **Risk assessment** and mitigation strategies",
+          "category": "Learning and Analysis",
+          "categoryId": "learning-and-analysis",
+          "variables": [
+            "SYSTEM_TYPE",
+            "WHAT_THE_SYSTEM_DOES",
+            "UPTIME_EXPECTATIONS",
+            "SECURITY_LEVEL_AND_COMPLIANCE",
+            "PREFERRED_OR_REQUIRED_TECHNOLOGIES",
+            "COST_LIMITATIONS",
+            "TEAM_SKILL_LEVELS",
+            "DEVELOPMENT_TIMELINE",
+            "CORE_FEATURE_1",
+            "CORE_FEATURE_2",
+            "CORE_FEATURE_3",
+            "INTEGRATION_REQUIREMENTS",
+            "GROWTH_EXPECTATIONS",
+            "MAINTENANCE_CONSIDERATIONS",
+            "ERROR_TOLERANCE",
+            "OBSERVABILITY_NEEDS"
+          ],
+          "tags": [
+            "learning and analysis"
+          ]
+        },
+        {
+          "id": "api-design-and-documentation",
+          "title": "API Design and Documentation",
+          "purpose": "To design and document APIs with clear specifications.",
+          "template": "Design a RESTful API for [API_PURPOSE]. Act as an API architect and technical writer.\n\n**API Overview:**\n- **Purpose:** [WHAT_THE_API_DOES]\n- **Target Users:** [DEVELOPERS/SYSTEMS_THAT_WILL_USE_IT]\n- **Authentication:** [AUTH_METHOD] (API key, OAuth, JWT, etc.)\n- **Rate Limiting:** [REQUESTS_PER_MINUTE/HOUR]\n- **Versioning Strategy:** [HOW_VERSIONS_WILL_BE_MANAGED]\n\n**Core Resources:**\n- **Resource 1:** [RESOURCE_NAME] - [DESCRIPTION]\n- **Resource 2:** [RESOURCE_NAME] - [DESCRIPTION]\n- **Resource 3:** [RESOURCE_NAME] - [DESCRIPTION]\n\n**Key Operations:**\n- [OPERATION_1] (e.g., Create user account)\n- [OPERATION_2] (e.g., Retrieve user profile)\n- [OPERATION_3] (e.g., Update user settings)\n- [OPERATION_4] (e.g., Delete user data)\n\n**Data Requirements:**\n- **Input Validation:** [VALIDATION_RULES]\n- **Output Formats:** [JSON/XML/etc.]\n- **Pagination:** [HOW_LARGE_DATASETS_ARE_HANDLED]\n- **Filtering/Sorting:** [QUERY_CAPABILITIES]\n\n**Quality Requirements:**\n- **Response Time:** [PERFORMANCE_EXPECTATIONS]\n- **Error Handling:** [HOW_ERRORS_ARE_COMMUNICATED]\n- **Documentation Style:** [OPENAPI/SWAGGER/CUSTOM]\n\nPlease provide:\n1. **Complete API specification** with endpoints\n2. **Request/response examples** for each endpoint\n3. **Error codes and messages** documentation\n4. **Authentication flow** explanation\n5. **SDK/client library considerations**\n6. **Testing strategy** for the API\n7. **Versioning and deprecation** policy",
+          "category": "Learning and Analysis",
+          "categoryId": "learning-and-analysis",
+          "variables": [
+            "API_PURPOSE",
+            "WHAT_THE_API_DOES",
+            "AUTH_METHOD",
+            "HOW_VERSIONS_WILL_BE_MANAGED",
+            "RESOURCE_NAME",
+            "DESCRIPTION",
+            "OPERATION_1",
+            "OPERATION_2",
+            "OPERATION_3",
+            "OPERATION_4",
+            "VALIDATION_RULES",
+            "HOW_LARGE_DATASETS_ARE_HANDLED",
+            "QUERY_CAPABILITIES",
+            "PERFORMANCE_EXPECTATIONS",
+            "HOW_ERRORS_ARE_COMMUNICATED"
+          ],
+          "tags": [
+            "learning and analysis",
+            "documentation",
+            "requirements"
+          ]
+        },
+        {
+          "id": "test-case-generator",
+          "title": "Test Case Generator",
+          "purpose": "To generate comprehensive test cases for software features.",
+          "template": "Generate comprehensive test cases for [FEATURE_OR_FUNCTION]. Act as a QA engineer and test specialist.\n\n**Feature Under Test:**\n[DETAILED_DESCRIPTION_OF_FEATURE_OR_FUNCTION]\n\n**Test Scope:**\n- **Functional Testing:** [INCLUDE/EXCLUDE]\n- **Performance Testing:** [INCLUDE/EXCLUDE]\n- **Security Testing:** [INCLUDE/EXCLUDE]\n- **Usability Testing:** [INCLUDE/EXCLUDE]\n- **Compatibility Testing:** [INCLUDE/EXCLUDE]\n\n**Test Environment:**\n- **Platform(s):** [PLATFORMS_TO_TEST_ON]\n- **Browsers/Devices:** [IF_APPLICABLE]\n- **Test Data Requirements:** [WHAT_DATA_IS_NEEDED]\n- **Prerequisites:** [SETUP_REQUIREMENTS]\n\n**User Scenarios:**\n- **Primary User Flow:** [MAIN_USER_JOURNEY]\n- **Alternative Flows:** [OTHER_WAYS_USERS_MIGHT_INTERACT]\n- **Edge Cases:** [UNUSUAL_BUT_POSSIBLE_SCENARIOS]\n\n**Acceptance Criteria:**\n- [CRITERIA_1]\n- [CRITERIA_2]\n- [CRITERIA_3]\n\n**Risk Areas:**\n- [HIGH_RISK_AREA_1] - [WHY_RISKY]\n- [HIGH_RISK_AREA_2] - [WHY_RISKY]\n\nPlease provide:\n1. **Positive test cases** (happy path scenarios)\n2. **Negative test cases** (error conditions and invalid inputs)\n3. **Edge cases and boundary testing**\n4. **Performance test scenarios** (if applicable)\n5. **Security test cases** (if applicable)\n6. **Test data requirements** and setup instructions\n7. **Expected results** for each test case\n8. **Priority levels** for test execution",
+          "category": "Learning and Analysis",
+          "categoryId": "learning-and-analysis",
+          "variables": [
+            "FEATURE_OR_FUNCTION",
+            "DETAILED_DESCRIPTION_OF_FEATURE_OR_FUNCTION",
+            "PLATFORMS_TO_TEST_ON",
+            "IF_APPLICABLE",
+            "WHAT_DATA_IS_NEEDED",
+            "SETUP_REQUIREMENTS",
+            "MAIN_USER_JOURNEY",
+            "OTHER_WAYS_USERS_MIGHT_INTERACT",
+            "UNUSUAL_BUT_POSSIBLE_SCENARIOS",
+            "CRITERIA_1",
+            "CRITERIA_2",
+            "CRITERIA_3",
+            "HIGH_RISK_AREA_1",
+            "WHY_RISKY",
+            "HIGH_RISK_AREA_2"
+          ],
+          "tags": [
+            "learning and analysis",
+            "testing",
+            "generation"
+          ]
+        },
+        {
+          "id": "code-coverage-and-testing-strategy",
+          "title": "Code Coverage and Testing Strategy",
+          "purpose": "To develop comprehensive testing strategies for code projects.",
+          "template": "Create a testing strategy for my [LANGUAGE] project. Act as a test automation engineer and QA strategist.\n\n**Project Details:**\n- **Project Type:** [WEB_APP/MOBILE_APP/API/LIBRARY/etc.]\n- **Technology Stack:** [FRAMEWORKS_AND_TOOLS]\n- **Team Size:** [NUMBER_OF_DEVELOPERS]\n- **Release Frequency:** [HOW_OFTEN_RELEASES_HAPPEN]\n- **Quality Requirements:** [QUALITY_STANDARDS]\n\n**Current State:**\n- **Existing Tests:** [WHAT_TESTS_ALREADY_EXIST]\n- **Current Coverage:** [COVERAGE_PERCENTAGE] (if known)\n- **Pain Points:** [CURRENT_TESTING_CHALLENGES]\n- **Time Constraints:** [AVAILABLE_TIME_FOR_TESTING]\n\n**Code Characteristics:**\n- **Complexity Level:** [SIMPLE/MODERATE/COMPLEX]\n- **Critical Components:** [MOST_IMPORTANT_PARTS_TO_TEST]\n- **External Dependencies:** [APIS/DATABASES/SERVICES]\n- **Performance Requirements:** [SPEED/LOAD_EXPECTATIONS]\n\n**Testing Goals:**\n- **Target Coverage:** [DESIRED_COVERAGE_PERCENTAGE]\n- **Test Types Needed:** [UNIT/INTEGRATION/E2E/etc.]\n- **Automation Level:** [HOW_MUCH_TO_AUTOMATE]\n- **CI/CD Integration:** [CONTINUOUS_TESTING_NEEDS]\n\nPlease provide:\n1. **Complete testing pyramid** strategy\n2. **Test types breakdown** (unit, integration, e2e percentages)\n3. **Testing framework recommendations**\n4. **Test organization** and file structure\n5. **Mocking and stubbing** strategy for dependencies\n6. **Continuous testing** integration approach\n7. **Code coverage targets** by component\n8. **Testing best practices** for the team\n9. **Test maintenance** strategy",
+          "category": "Learning and Analysis",
+          "categoryId": "learning-and-analysis",
+          "variables": [
+            "LANGUAGE",
+            "FRAMEWORKS_AND_TOOLS",
+            "NUMBER_OF_DEVELOPERS",
+            "HOW_OFTEN_RELEASES_HAPPEN",
+            "QUALITY_STANDARDS",
+            "WHAT_TESTS_ALREADY_EXIST",
+            "COVERAGE_PERCENTAGE",
+            "CURRENT_TESTING_CHALLENGES",
+            "AVAILABLE_TIME_FOR_TESTING",
+            "MOST_IMPORTANT_PARTS_TO_TEST",
+            "DESIRED_COVERAGE_PERCENTAGE",
+            "HOW_MUCH_TO_AUTOMATE",
+            "CONTINUOUS_TESTING_NEEDS"
+          ],
+          "tags": [
+            "learning and analysis",
+            "coding",
+            "testing",
+            "planning"
+          ]
+        },
+        {
+          "id": "rhyme-scheme-developer",
+          "title": "Rhyme Scheme Developer",
+          "purpose": "To develop effective rhyme schemes and improve lyrical flow.",
+          "template": "Help me develop a rhyme scheme for my song lyrics. Act as a professional lyricist and poetry expert.\n\n**Song Details:**\n- **Genre:** [GENRE]\n- **Theme:** [SONG_THEME]\n- **Mood:** [EMOTIONAL_TONE]\n- **Target Verse Length:** [NUMBER_OF_LINES] lines per verse\n- **Chorus Length:** [NUMBER_OF_LINES] lines\n\n**Current Lyrics (if any):**",
+          "category": "Learning and Analysis",
+          "categoryId": "learning-and-analysis",
+          "variables": [
+            "GENRE",
+            "SONG_THEME",
+            "EMOTIONAL_TONE",
+            "NUMBER_OF_LINES"
+          ],
+          "tags": [
+            "learning and analysis",
+            "refactoring",
+            "lyrics",
+            "rhyming"
+          ]
+        },
+        {
+          "id": "song-theme-and-story-developer",
+          "title": "Song Theme and Story Developer",
+          "purpose": "To develop compelling themes and narratives for songs.",
+          "template": "Help me develop a compelling theme and story for a song. Act as a narrative songwriter and storytelling expert.\n\n**Initial Concept:**\n[BRIEF_DESCRIPTION_OF_YOUR_SONG_IDEA_OR_INSPIRATION]\n\n**Song Parameters:**\n- **Genre:** [MUSICAL_GENRE]\n- **Length:** [APPROXIMATE_SONG_LENGTH]\n- **Target Audience:** [WHO_SHOULD_CONNECT_WITH_THIS_SONG]\n- **Emotional Journey:** [WHERE_SONG_STARTS_AND_ENDS_EMOTIONALLY]\n\n**Theme Requirements:**\n- **Main Theme:** [CENTRAL_MESSAGE_OR_CONCEPT]\n- **Universal Appeal:** [HOW_OTHERS_CAN_RELATE]\n- **Personal Connection:** [WHY_THIS_MATTERS_TO_YOU]\n- **Originality:** [HOW_TO_MAKE_IT_UNIQUE]\n\n**Story Elements:**\n- **Perspective:** [1ST_PERSON/3RD_PERSON/MULTIPLE]\n- **Time Frame:** [SINGLE_MOMENT/JOURNEY/LIFETIME]\n- **Setting:** [WHERE_AND_WHEN_STORY_TAKES_PLACE]\n- **Characters:** [WHO_IS_INVOLVED]\n\n**Emotional Requirements:**\n- **Starting Emotion:** [HOW_SONG_BEGINS]\n- **Climax Emotion:** [PEAK_EMOTIONAL_MOMENT]\n- **Resolution:** [HOW_SONG_CONCLUDES]\n- **Emotional Complexity:** [SIMPLE/LAYERED/CONFLICTED]\n\n**Constraints:**\n- **Avoid:** [CLICHES_OR_TOPICS_TO_AVOID]\n- **Include:** [ELEMENTS_THAT_MUST_BE_PRESENT]\n- **Tone Limitations:** [CONTENT_APPROPRIATENESS]\n\nPlease provide:\n1. **Detailed theme development** with layers of meaning\n2. **Complete story arc** for the song\n3. **Character development** (if applicable)\n4. **Scene-by-scene breakdown** for verses/chorus/bridge\n5. **Emotional progression** through the song\n6. **Unique angles** that differentiate from similar songs\n7. **Universal connection points** for broad appeal\n8. **Potential metaphors and imagery** to support the theme",
+          "category": "Learning and Analysis",
+          "categoryId": "learning-and-analysis",
+          "variables": [
+            "BRIEF_DESCRIPTION_OF_YOUR_SONG_IDEA_OR_INSPIRATION",
+            "MUSICAL_GENRE",
+            "APPROXIMATE_SONG_LENGTH",
+            "WHO_SHOULD_CONNECT_WITH_THIS_SONG",
+            "WHERE_SONG_STARTS_AND_ENDS_EMOTIONALLY",
+            "CENTRAL_MESSAGE_OR_CONCEPT",
+            "HOW_OTHERS_CAN_RELATE",
+            "WHY_THIS_MATTERS_TO_YOU",
+            "HOW_TO_MAKE_IT_UNIQUE",
+            "WHERE_AND_WHEN_STORY_TAKES_PLACE",
+            "WHO_IS_INVOLVED",
+            "HOW_SONG_BEGINS",
+            "PEAK_EMOTIONAL_MOMENT",
+            "HOW_SONG_CONCLUDES",
+            "CLICHES_OR_TOPICS_TO_AVOID",
+            "ELEMENTS_THAT_MUST_BE_PRESENT",
+            "CONTENT_APPROPRIATENESS"
+          ],
+          "tags": [
+            "learning and analysis",
+            "lyrics",
+            "storytelling"
+          ]
+        },
+        {
+          "id": "genre-specific-song-structure",
+          "title": "Genre-Specific Song Structure",
+          "purpose": "To create song structures optimized for specific musical genres.",
+          "template": "Create an optimal song structure for a [GENRE] song. Act as a music producer and genre specialist.\n\n**Song Specifications:**\n- **Genre:** [SPECIFIC_GENRE] (be as specific as possible)\n- **Sub-genre/Style:** [STYLE_VARIATIONS] if applicable\n- **Target Duration:** [SONG_LENGTH] (radio edit, album track, etc.)\n- **Commercial Goals:** [RADIO_FRIENDLY/ARTISTIC/STREAMING_OPTIMIZED]\n\n**Song Content:**\n- **Theme:** [SONG_THEME_OR_CONCEPT]\n- **Energy Level:** [LOW/MEDIUM/HIGH/VARIABLE]\n- **Vocal Style:** [VOCAL_APPROACH]\n- **Instrumental Focus:** [KEY_INSTRUMENTS_OR_SOUNDS]\n\n**Structure Preferences:**\n- **Complexity:** [SIMPLE/STANDARD/COMPLEX]\n- **Hook Placement:** [WHERE_MAIN_HOOKS_SHOULD_BE]\n- **Dynamic Range:** [CONSISTENT/BUILDING/VARIED]\n- **Repetition Tolerance:** [HOW_MUCH_REPETITION_IS_ACCEPTABLE]\n\n**Commercial Considerations:**\n- **Streaming Optimization:** [EARLY_HOOK_PLACEMENT]\n- **Radio Requirements:** [TIME_CONSTRAINTS]\n- **Live Performance:** [CONCERT_SUITABILITY]\n- **Dance/Movement:** [GROOVE_REQUIREMENTS]\n\n**Reference Points:**\n- **Similar Artists:** [ARTISTS_IN_GENRE] (optional)\n- **Successful Songs:** [REFERENCE_TRACKS] (optional)\n- **Avoid Comparisons to:** [SONGS_TO_DIFFERENTIATE_FROM]\n\nPlease provide:\n1. **Detailed song structure** with timing estimates\n2. **Section-by-section purpose** and energy mapping\n3. **Genre-specific conventions** to follow or break\n4. **Hook and catchiness strategies** for the genre\n5. **Bridge and breakdown** recommendations\n6. **Intro and outro** considerations\n7. **Variation suggestions** for different song goals\n8. **Production notes** relevant to structure",
+          "category": "Learning and Analysis",
+          "categoryId": "learning-and-analysis",
+          "variables": [
+            "GENRE",
+            "SPECIFIC_GENRE",
+            "STYLE_VARIATIONS",
+            "SONG_LENGTH",
+            "SONG_THEME_OR_CONCEPT",
+            "VOCAL_APPROACH",
+            "KEY_INSTRUMENTS_OR_SOUNDS",
+            "WHERE_MAIN_HOOKS_SHOULD_BE",
+            "HOW_MUCH_REPETITION_IS_ACCEPTABLE",
+            "EARLY_HOOK_PLACEMENT",
+            "TIME_CONSTRAINTS",
+            "CONCERT_SUITABILITY",
+            "GROOVE_REQUIREMENTS",
+            "ARTISTS_IN_GENRE",
+            "REFERENCE_TRACKS",
+            "SONGS_TO_DIFFERENTIATE_FROM"
+          ],
+          "tags": [
+            "learning and analysis",
+            "optimization",
+            "lyrics",
+            "genre",
+            "structure",
+            "generation"
+          ]
+        },
+        {
+          "id": "dialogue-writing-specialist",
+          "title": "Dialogue Writing Specialist",
+          "purpose": "To create authentic, character-driven dialogue.",
+          "template": "Create authentic dialogue for my story. Act as a dialogue coach and character voice specialist.\n\n**Scene Context:**\n- **Setting:** [WHERE_AND_WHEN_SCENE_TAKES_PLACE]\n- **Situation:** [WHAT_IS_HAPPENING_IN_THE_SCENE]\n- **Purpose:** [WHAT_THE_SCENE_NEEDS_TO_ACCOMPLISH]\n- **Tone:** [SERIOUS/HUMOROUS/TENSE/ROMANTIC/etc.]\n\n**Characters in Scene:**\n- **Character 1:** [NAME] - [BRIEF_DESCRIPTION_AND_MOTIVATION]\n- **Character 2:** [NAME] - [BRIEF_DESCRIPTION_AND_MOTIVATION]\n- **Additional Characters:** [OTHER_SPEAKERS] if applicable\n\n**Character Voices:**\n- **[CHARACTER_1_NAME] speaks:** [SPEAKING_STYLE_DESCRIPTION]\n- **[CHARACTER_2_NAME] speaks:** [SPEAKING_STYLE_DESCRIPTION]\n- **Relationship Dynamic:** [HOW_CHARACTERS_RELATE_TO_EACH_OTHER]\n\n**Dialogue Requirements:**\n- **Information to Convey:** [WHAT_READERS_NEED_TO_LEARN]\n- **Subtext:** [WHAT_CHARACTERS_AREN'T_SAYING_DIRECTLY]\n- **Conflict/Tension:** [SOURCE_OF_DRAMATIC_TENSION]\n- **Character Development:** [HOW_CHARACTERS_SHOULD_GROW]\n\n**Style Preferences:**\n- **Realism Level:** [NATURALISTIC/STYLIZED/HEIGHTENED]\n- **Dialect/Accent:** [SPEECH_PATTERNS_TO_INCLUDE]\n- **Time Period:** [HISTORICAL_LANGUAGE_CONSIDERATIONS]\n- **Genre Conventions:** [DIALOGUE_STYLE_FOR_GENRE]\n\n**Constraints:**\n- **Length:** [APPROXIMATE_WORD_COUNT]\n- **Content Rating:** [APPROPRIATE_LANGUAGE_LEVEL]\n- **Avoid:** [SPECIFIC_SPEECH_PATTERNS_TO_AVOID]\n\nPlease provide:\n1. **Complete dialogue scene** with action beats\n2. **Character voice differentiation** clearly shown\n3. **Subtext and layers** of meaning\n4. **Natural speech patterns** and interruptions\n5. **Emotional progression** through the conversation\n6. **Dialogue tags and action** integration\n7. **Revision suggestions** for authenticity",
+          "category": "Learning and Analysis",
+          "categoryId": "learning-and-analysis",
+          "variables": [
+            "WHERE_AND_WHEN_SCENE_TAKES_PLACE",
+            "WHAT_IS_HAPPENING_IN_THE_SCENE",
+            "WHAT_THE_SCENE_NEEDS_TO_ACCOMPLISH",
+            "NAME",
+            "BRIEF_DESCRIPTION_AND_MOTIVATION",
+            "OTHER_SPEAKERS",
+            "CHARACTER_1_NAME",
+            "SPEAKING_STYLE_DESCRIPTION",
+            "CHARACTER_2_NAME",
+            "HOW_CHARACTERS_RELATE_TO_EACH_OTHER",
+            "WHAT_READERS_NEED_TO_LEARN",
+            "SOURCE_OF_DRAMATIC_TENSION",
+            "HOW_CHARACTERS_SHOULD_GROW",
+            "SPEECH_PATTERNS_TO_INCLUDE",
+            "HISTORICAL_LANGUAGE_CONSIDERATIONS",
+            "DIALOGUE_STYLE_FOR_GENRE",
+            "APPROXIMATE_WORD_COUNT",
+            "APPROPRIATE_LANGUAGE_LEVEL",
+            "SPECIFIC_SPEECH_PATTERNS_TO_AVOID"
+          ],
+          "tags": [
+            "learning and analysis",
+            "characters",
+            "generation"
+          ]
+        },
+        {
+          "id": "scene-setting-and-atmosphere",
+          "title": "Scene Setting and Atmosphere",
+          "purpose": "To create vivid, immersive scene descriptions and atmospheric writing.",
+          "template": "Create vivid scene descriptions and atmosphere for my story. Act as a descriptive writing expert.\n\n**Scene Requirements:**\n- **Location:** [SPECIFIC_SETTING_DESCRIPTION]\n- **Time Period:** [WHEN_SCENE_TAKES_PLACE]\n- **Time of Day/Season:** [TEMPORAL_CONTEXT]\n- **Weather/Climate:** [ATMOSPHERIC_CONDITIONS]\n\n**Mood and Atmosphere:**\n- **Desired Mood:** [EMOTIONAL_ATMOSPHERE]\n- **Genre Tone:** [GENRE_SPECIFIC_ATMOSPHERE]\n- **Symbolic Elements:** [WHAT_SETTING_SHOULD_REPRESENT]\n- **Foreshadowing:** [HINTS_ABOUT_FUTURE_EVENTS]\n\n**Sensory Details:**\n- **Visual Elements:** [WHAT_CHARACTERS_AND_READERS_SEE]\n- **Sounds:** [AUDIO_LANDSCAPE]\n- **Smells:** [SCENTS_AND_ODORS]\n- **Textures:** [THINGS_CHARACTERS_MIGHT_TOUCH]\n- **Tastes:** [IF_APPLICABLE]\n\n**Character Interaction:**\n- **POV Character:** [WHO_IS_EXPERIENCING_THE_SCENE]\n- **Character's Emotional State:** [HOW_EMOTIONS_AFFECT_PERCEPTION]\n- **Physical Position:** [WHERE_CHARACTER_IS_IN_THE_SPACE]\n- **Movement:** [HOW_CHARACTER_MOVES_THROUGH_SPACE]\n\n**Story Function:**\n- **Plot Purpose:** [HOW_SETTING_SERVES_THE_STORY]\n- **Character Development:** [WHAT_SETTING_REVEALS_ABOUT_CHARACTERS]\n- **Theme Connection:** [HOW_SETTING_SUPPORTS_THEMES]\n- **Pacing:** [FAST/SLOW/CONTEMPLATIVE_DESCRIPTION]\n\n**Style Preferences:**\n- **Description Length:** [BRIEF/MODERATE/DETAILED]\n- **Language Style:** [SIMPLE/LYRICAL/TECHNICAL]\n- **Metaphor Use:** [MINIMAL/MODERATE/EXTENSIVE]\n\nPlease provide:\n1. **Complete scene description** with rich sensory details\n2. **Atmospheric elements** that support mood\n3. **Character integration** with the environment\n4. **Symbolic and thematic** connections\n5. **Pacing and rhythm** appropriate for scene\n6. **Unique details** that make setting memorable\n7. **Revision suggestions** for enhancement",
+          "category": "Learning and Analysis",
+          "categoryId": "learning-and-analysis",
+          "variables": [
+            "SPECIFIC_SETTING_DESCRIPTION",
+            "WHEN_SCENE_TAKES_PLACE",
+            "TEMPORAL_CONTEXT",
+            "ATMOSPHERIC_CONDITIONS",
+            "EMOTIONAL_ATMOSPHERE",
+            "GENRE_SPECIFIC_ATMOSPHERE",
+            "WHAT_SETTING_SHOULD_REPRESENT",
+            "HINTS_ABOUT_FUTURE_EVENTS",
+            "WHAT_CHARACTERS_AND_READERS_SEE",
+            "AUDIO_LANDSCAPE",
+            "SCENTS_AND_ODORS",
+            "THINGS_CHARACTERS_MIGHT_TOUCH",
+            "IF_APPLICABLE",
+            "WHO_IS_EXPERIENCING_THE_SCENE",
+            "HOW_EMOTIONS_AFFECT_PERCEPTION",
+            "WHERE_CHARACTER_IS_IN_THE_SPACE",
+            "HOW_CHARACTER_MOVES_THROUGH_SPACE",
+            "HOW_SETTING_SERVES_THE_STORY",
+            "WHAT_SETTING_REVEALS_ABOUT_CHARACTERS",
+            "HOW_SETTING_SUPPORTS_THEMES"
+          ],
+          "tags": [
+            "learning and analysis",
+            "scenes",
+            "generation"
+          ]
+        },
+        {
+          "id": "marketing-copy-creator",
+          "title": "Marketing Copy Creator",
+          "purpose": "To create compelling marketing copy for various purposes.",
+          "template": "Create compelling marketing copy for [PRODUCT/SERVICE/CAMPAIGN]. Act as a copywriting expert and marketing strategist.\n\n**Product/Service Details:**\n- **Name:** [PRODUCT_OR_SERVICE_NAME]\n- **Category:** [WHAT_TYPE_OF_OFFERING]\n- **Key Features:** [TOP_3_FEATURES_OR_BENEFITS]\n- **Unique Selling Proposition:** [WHAT_MAKES_IT_DIFFERENT]\n- **Price Point:** [COST_RANGE_OR_STRATEGY]\n\n**Target Audience:**\n- **Primary Audience:** [DETAILED_DEMOGRAPHIC_DESCRIPTION]\n- **Pain Points:** [PROBLEMS_AUDIENCE_FACES]\n- **Motivations:** [WHAT_DRIVES_PURCHASE_DECISIONS]\n- **Communication Style:** [HOW_AUDIENCE_PREFERS_TO_BE_ADDRESSED]\n\n**Marketing Goals:**\n- **Primary Objective:** [AWARENESS/CONVERSION/RETENTION/etc.]\n- **Call to Action:** [WHAT_AUDIENCE_SHOULD_DO]\n- **Success Metrics:** [HOW_SUCCESS_WILL_BE_MEASURED]\n- **Campaign Duration:** [TIMELINE_CONSIDERATIONS]\n\n**Copy Requirements:**\n- **Format:** [EMAIL/WEBPAGE/AD/SOCIAL_POST/BROCHURE/etc.]\n- **Length:** [WORD_COUNT_OR_CHARACTER_LIMITS]\n- **Tone:** [PROFESSIONAL/CASUAL/URGENT/FRIENDLY/etc.]\n- **Brand Voice:** [BRAND_PERSONALITY_DESCRIPTION]\n\n**Competition and Context:**\n- **Competitive Advantage:** [HOW_TO_POSITION_AGAINST_COMPETITORS]\n- **Market Context:** [CURRENT_MARKET_CONDITIONS]\n- **Seasonal Factors:** [TIMING_CONSIDERATIONS]\n\n**Constraints:**\n- **Legal Requirements:** [DISCLAIMERS_OR_COMPLIANCE_NEEDS]\n- **Brand Guidelines:** [STYLE_OR_MESSAGING_RESTRICTIONS]\n- **Budget Implications:** [COST_MESSAGING_CONSIDERATIONS]\n\nPlease provide:\n1. **Compelling headline** and subheadings\n2. **Feature-benefit translations** for key points\n3. **Emotional appeal** elements\n4. **Social proof** suggestions (testimonials, reviews)\n5. **Clear call-to-action** copy\n6. **Urgency and scarcity** elements (if appropriate)\n7. **A/B testing variations** for key elements\n8. **SEO considerations** (if web copy)",
+          "category": "Learning and Analysis",
+          "categoryId": "learning-and-analysis",
+          "variables": [
+            "PRODUCT_OR_SERVICE_NAME",
+            "WHAT_TYPE_OF_OFFERING",
+            "TOP_3_FEATURES_OR_BENEFITS",
+            "WHAT_MAKES_IT_DIFFERENT",
+            "COST_RANGE_OR_STRATEGY",
+            "DETAILED_DEMOGRAPHIC_DESCRIPTION",
+            "PROBLEMS_AUDIENCE_FACES",
+            "WHAT_DRIVES_PURCHASE_DECISIONS",
+            "HOW_AUDIENCE_PREFERS_TO_BE_ADDRESSED",
+            "WHAT_AUDIENCE_SHOULD_DO",
+            "HOW_SUCCESS_WILL_BE_MEASURED",
+            "TIMELINE_CONSIDERATIONS",
+            "WORD_COUNT_OR_CHARACTER_LIMITS",
+            "BRAND_PERSONALITY_DESCRIPTION",
+            "HOW_TO_POSITION_AGAINST_COMPETITORS",
+            "CURRENT_MARKET_CONDITIONS",
+            "TIMING_CONSIDERATIONS",
+            "DISCLAIMERS_OR_COMPLIANCE_NEEDS",
+            "STYLE_OR_MESSAGING_RESTRICTIONS",
+            "COST_MESSAGING_CONSIDERATIONS"
+          ],
+          "tags": [
+            "learning and analysis",
+            "business",
+            "generation"
+          ]
+        },
+        {
+          "id": "technical-documentation-writer",
+          "title": "Technical Documentation Writer",
+          "purpose": "To create clear, comprehensive technical documentation.",
+          "template": "Create technical documentation for [SYSTEM/PROCESS/TOOL]. Act as a technical writing expert.\n\n**Documentation Subject:**\n- **Product/System:** [WHAT_NEEDS_DOCUMENTATION]\n- **Version:** [VERSION_NUMBER_OR_CURRENT_STATE]\n- **Complexity Level:** [SIMPLE/MODERATE/COMPLEX]\n- **Update Frequency:** [HOW_OFTEN_DOCS_NEED_UPDATES]\n\n**Target Audience:**\n- **Primary Users:** [DEVELOPERS/ADMINS/END_USERS/etc.]\n- **Technical Level:** [BEGINNER/INTERMEDIATE/EXPERT]\n- **Use Cases:** [HOW_AUDIENCE_WILL_USE_DOCUMENTATION]\n- **Time Constraints:** [TYPICAL_TIME_PRESSURE_FOR_USERS]\n\n**Documentation Scope:**\n- **Getting Started:** [INSTALLATION/SETUP_NEEDS]\n- **Core Features:** [MAIN_FUNCTIONALITY_TO_DOCUMENT]\n- **Advanced Features:** [COMPLEX_OR_OPTIONAL_FUNCTIONALITY]\n- **Troubleshooting:** [COMMON_ISSUES_AND_SOLUTIONS]\n- **Integration:** [HOW_IT_WORKS_WITH_OTHER_SYSTEMS]\n\n**Format Requirements:**\n- **Documentation Type:** [README/WIKI/API_DOCS/USER_MANUAL/etc.]\n- **Platform:** [WHERE_DOCS_WILL_BE_HOSTED]\n- **Interactivity:** [STATIC/INTERACTIVE/LIVE_EXAMPLES]\n- **Media:** [TEXT_ONLY/SCREENSHOTS/VIDEOS/DIAGRAMS]\n\n**Content Structure:**\n- **Organization:** [HIERARCHICAL/SEQUENTIAL/MODULAR]\n- **Navigation:** [TABLE_OF_CONTENTS/SEARCH/CROSS_REFERENCES]\n- **Code Examples:** [LANGUAGE_AND_STYLE_PREFERENCES]\n- **Screenshots:** [WHEN_AND_HOW_TO_USE_VISUALS]\n\n**Maintenance:**\n- **Version Control:** [HOW_TO_TRACK_CHANGES]\n- **Review Process:** [WHO_VALIDATES_ACCURACY]\n- **Feedback Collection:** [HOW_USERS_CAN_SUGGEST_IMPROVEMENTS]\n\nPlease provide:\n1. **Complete documentation structure** and outline\n2. **Clear, step-by-step instructions** for key processes\n3. **Code examples** with explanations\n4. **Troubleshooting section** with common issues\n5. **Quick reference** sections for experienced users\n6. **Visual aids** recommendations (diagrams, screenshots)\n7. **Maintenance strategy** for keeping docs current\n8. **User feedback** integration approach",
+          "category": "Learning and Analysis",
+          "categoryId": "learning-and-analysis",
+          "variables": [
+            "WHAT_NEEDS_DOCUMENTATION",
+            "VERSION_NUMBER_OR_CURRENT_STATE",
+            "HOW_OFTEN_DOCS_NEED_UPDATES",
+            "HOW_AUDIENCE_WILL_USE_DOCUMENTATION",
+            "TYPICAL_TIME_PRESSURE_FOR_USERS",
+            "MAIN_FUNCTIONALITY_TO_DOCUMENT",
+            "COMPLEX_OR_OPTIONAL_FUNCTIONALITY",
+            "COMMON_ISSUES_AND_SOLUTIONS",
+            "HOW_IT_WORKS_WITH_OTHER_SYSTEMS",
+            "WHERE_DOCS_WILL_BE_HOSTED",
+            "LANGUAGE_AND_STYLE_PREFERENCES",
+            "WHEN_AND_HOW_TO_USE_VISUALS",
+            "HOW_TO_TRACK_CHANGES",
+            "WHO_VALIDATES_ACCURACY",
+            "HOW_USERS_CAN_SUGGEST_IMPROVEMENTS"
+          ],
+          "tags": [
+            "learning and analysis",
+            "documentation",
+            "generation"
+          ]
+        },
+        {
+          "id": "prompt-testing-and-validation",
+          "title": "Prompt Testing and Validation",
+          "purpose": "To test and validate prompt effectiveness across different scenarios.",
+          "template": "Help me test and validate the effectiveness of my prompt. Act as a prompt evaluation expert.\n\n**Prompt to Test:**",
+          "category": "Learning and Analysis",
+          "categoryId": "learning-and-analysis",
+          "variables": [],
+          "tags": [
+            "learning and analysis",
+            "testing",
+            "meta"
+          ]
+        },
+        {
+          "id": "domain-specific-prompt-adapter",
+          "title": "Domain-Specific Prompt Adapter",
+          "purpose": "To adapt general prompts for specific domains or industries.",
+          "template": "Adapt this general prompt for the [DOMAIN/INDUSTRY] field. Act as a domain expert and prompt engineering specialist.\n\n**Base Prompt:**",
+          "category": "Learning and Analysis",
+          "categoryId": "learning-and-analysis",
+          "variables": [],
+          "tags": [
+            "learning and analysis",
+            "meta"
+          ]
+        },
+        {
+          "id": "daily-standup-generator",
+          "title": "Daily Standup Generator",
+          "purpose": "Quick template for generating daily standup updates.",
+          "template": "Generate my daily standup update. Focus on clarity and brevity.\n\n**Yesterday's Accomplishments:**\n- [TASK_1_COMPLETED]\n- [TASK_2_COMPLETED]\n- [TASK_3_COMPLETED]\n\n**Today's Goals:**\n- [PRIORITY_1]\n- [PRIORITY_2]\n- [PRIORITY_3]\n\n**Blockers/Challenges:**\n- [BLOCKER_1] - [HELP_NEEDED]\n- [BLOCKER_2] - [HELP_NEEDED]\n\n**Team Dependencies:**\n- [WAITING_FOR] from [TEAM_MEMBER]\n- [PROVIDING_TO] for [TEAM_MEMBER]\n\n**Notes:**\n[ADDITIONAL_CONTEXT_OR_UPDATES]\n\nFormat as a brief, professional standup update.",
+          "category": "Learning and Analysis",
+          "categoryId": "learning-and-analysis",
+          "variables": [
+            "TASK_1_COMPLETED",
+            "TASK_2_COMPLETED",
+            "TASK_3_COMPLETED",
+            "PRIORITY_1",
+            "PRIORITY_2",
+            "PRIORITY_3",
+            "BLOCKER_1",
+            "HELP_NEEDED",
+            "BLOCKER_2",
+            "WAITING_FOR",
+            "TEAM_MEMBER",
+            "PROVIDING_TO",
+            "ADDITIONAL_CONTEXT_OR_UPDATES"
+          ],
+          "tags": [
+            "learning and analysis"
+          ]
+        },
+        {
+          "id": "bug-report-generator",
+          "title": "Bug Report Generator",
+          "purpose": "Comprehensive bug reporting template.",
+          "template": "Create a detailed bug report for this issue. Include all necessary information for developers.\n\n**Bug Summary:**\n[ONE_LINE_DESCRIPTION_OF_THE_BUG]\n\n**Environment:**\n- **Application Version:** [VERSION]\n- **Operating System:** [OS_AND_VERSION]\n- **Browser:** [BROWSER_AND_VERSION] (if applicable)\n- **Device:** [DEVICE_INFO] (if mobile)\n\n**Steps to Reproduce:**\n1. [STEP_1]\n2. [STEP_2]\n3. [STEP_3]\n\n**Expected Behavior:**\n[WHAT_SHOULD_HAPPEN]\n\n**Actual Behavior:**\n[WHAT_ACTUALLY_HAPPENS]\n\n**Error Messages:**",
+          "category": "Learning and Analysis",
+          "categoryId": "learning-and-analysis",
+          "variables": [
+            "ONE_LINE_DESCRIPTION_OF_THE_BUG",
+            "VERSION",
+            "OS_AND_VERSION",
+            "BROWSER_AND_VERSION",
+            "DEVICE_INFO",
+            "STEP_1",
+            "STEP_2",
+            "STEP_3",
+            "WHAT_SHOULD_HAPPEN",
+            "WHAT_ACTUALLY_HAPPENS"
+          ],
+          "tags": [
+            "learning and analysis"
+          ]
+        }
+      ],
+      "count": 19
+    }
+  ],
+  "allTemplates": [
+    {
+      "id": "generate-a-function-from-a-description",
+      "title": "Generate a Function from a Description",
+      "purpose": "To generate a complete function in a specified language based on a detailed description.",
+      "template": "Act as an expert [LANGUAGE] developer.\nYour task is to create a function that performs the following action: [DETAILED_DESCRIPTION_OF_FUNCTION].\n\n**Function Name:** `[FUNCTION_NAME]`\n**Parameters:**\n*   `[PARAM_1_NAME]`: ([PARAM_1_TYPE]) - [PARAM_1_DESCRIPTION]\n*   `[PARAM_2_NAME]`: ([PARAM_2_TYPE]) - [PARAM_2_DESCRIPTION]\n**Return Value:** ([RETURN_TYPE]) - [RETURN_VALUE_DESCRIPTION]\n\n**Constraints & Edge Cases:**\n*   [CONSTRAINT_1]\n*   [CONSTRAINT_2]\n*   Handle the case where [EDGE_CASE_DESCRIPTION].\n\nPlease provide the complete function code, including type hints and a brief explanation of the implementation.",
+      "category": "Development",
+      "categoryId": "development",
+      "usageInstructions": "Fill in the `[VARIABLES]` with the specifics of your function requirements. Be as detailed as possible in the description.",
+      "example": "Act as an expert Python developer.\nYour task is to create a function that performs the following action: Calculates the factorial of a non-negative integer.\n\n**Function Name:** `calculate_factorial`\n**Parameters:**\n*   `n`: (int) - The non-negative integer for which to calculate the factorial.\n**Return Value:** (int) - The factorial of the input integer `n`.\n\n**Constraints & Edge Cases:**\n*   The input `n` will always be a non-negative integer.\n*   The factorial of 0 is 1.\n*   Handle the case where the input is greater than 20 (return an error or handle large numbers).\n\nPlease provide the complete function code, including type hints and a brief explanation of the implementation.",
+      "customizationTips": "*   For more complex functions, add a \"Logic\" section detailing the step-by-step process.\n*   You can specify a particular coding style or library to use.",
+      "variables": [
+        "LANGUAGE",
+        "DETAILED_DESCRIPTION_OF_FUNCTION",
+        "FUNCTION_NAME",
+        "PARAM_1_NAME",
+        "PARAM_1_TYPE",
+        "PARAM_1_DESCRIPTION",
+        "PARAM_2_NAME",
+        "PARAM_2_TYPE",
+        "PARAM_2_DESCRIPTION",
+        "RETURN_TYPE",
+        "RETURN_VALUE_DESCRIPTION",
+        "CONSTRAINT_1",
+        "CONSTRAINT_2",
+        "EDGE_CASE_DESCRIPTION"
+      ],
+      "tags": [
+        "development",
+        "coding",
+        "generation"
+      ]
+    },
+    {
+      "id": "code-optimization-and-refactoring",
+      "title": "Code Optimization and Refactoring",
+      "purpose": "To optimize existing code for better performance, readability, or maintainability.",
+      "template": "I need you to act as a senior [LANGUAGE] developer and code optimizer.\n\n**Current Code:**\n```[LANGUAGE]\n[PASTE_EXISTING_CODE_HERE]",
+      "category": "Development",
+      "categoryId": "development",
+      "example": "I need you to act as a senior Python developer and code optimizer.\n\n**Current Code:**\n```python\ndef find_duplicates(lst):\n    duplicates = []\n    for i in range(len(lst)):\n        for j in range(i+1, len(lst)):\n            if lst[i] == lst[j] and lst[i] not in duplicates:\n                duplicates.append(lst[i])\n    return duplicates",
+      "customizationTips": "- Specify the current performance bottlenecks if known\n- Add specific coding standards or style guides to follow",
+      "variables": [
+        "LANGUAGE",
+        "PASTE_EXISTING_CODE_HERE"
+      ],
+      "tags": [
+        "development",
+        "coding",
+        "optimization",
+        "refactoring"
+      ]
+    },
+    {
+      "id": "algorithm-implementation",
+      "title": "Algorithm Implementation",
+      "purpose": "To implement a specific algorithm or data structure from scratch.",
+      "template": "Act as a computer science expert and implement the [ALGORITHM_NAME] algorithm in [LANGUAGE].\n\n**Algorithm Requirements:**\n- [REQUIREMENT_1]\n- [REQUIREMENT_2]\n- [REQUIREMENT_3]\n\n**Input:** [INPUT_DESCRIPTION]\n**Output:** [OUTPUT_DESCRIPTION]\n**Time Complexity Target:** [COMPLEXITY] (if applicable)\n**Space Complexity Target:** [COMPLEXITY] (if applicable)\n\n**Additional Requirements:**\n- Include comprehensive comments explaining each step\n- Add input validation and error handling\n- Provide test cases with expected outputs\n- Explain the algorithm's approach and why it works\n\n**Test Cases:**\n1. Input: [TEST_INPUT_1] → Expected Output: [TEST_OUTPUT_1]\n2. Input: [TEST_INPUT_2] → Expected Output: [TEST_OUTPUT_2]\n3. Edge Case: [EDGE_CASE] → Expected Output: [EDGE_OUTPUT]",
+      "category": "Development",
+      "categoryId": "development",
+      "variables": [
+        "ALGORITHM_NAME",
+        "LANGUAGE",
+        "REQUIREMENT_1",
+        "REQUIREMENT_2",
+        "REQUIREMENT_3",
+        "INPUT_DESCRIPTION",
+        "OUTPUT_DESCRIPTION",
+        "COMPLEXITY",
+        "TEST_INPUT_1",
+        "TEST_OUTPUT_1",
+        "TEST_INPUT_2",
+        "TEST_OUTPUT_2",
+        "EDGE_CASE",
+        "EDGE_OUTPUT"
+      ],
+      "tags": [
+        "development",
+        "structure"
+      ]
+    },
+    {
+      "id": "debug-error-analysis",
+      "title": "Debug Error Analysis",
+      "purpose": "To analyze and fix bugs or errors in existing code.",
+      "template": "I need help debugging a [LANGUAGE] issue. Act as an experienced debugging expert.\n\n**Problem Description:**\n[DETAILED_DESCRIPTION_OF_THE_PROBLEM]\n\n**Error Message/Symptoms:**",
+      "category": "Development",
+      "categoryId": "development",
+      "variables": [
+        "LANGUAGE",
+        "DETAILED_DESCRIPTION_OF_THE_PROBLEM"
+      ],
+      "tags": [
+        "development",
+        "coding",
+        "debugging",
+        "research"
+      ]
+    },
+    {
+      "id": "performance-troubleshooting",
+      "title": "Performance Troubleshooting",
+      "purpose": "To identify and resolve performance issues in code.",
+      "template": "I need help with performance analysis and optimization for my [LANGUAGE] application.\n\n**Performance Issue:**\n[DESCRIBE_PERFORMANCE_PROBLEM] (e.g., slow response times, high memory usage, CPU spikes)\n\n**Current Metrics:**\n- Response Time: [TIME]\n- Memory Usage: [MEMORY]\n- CPU Usage: [CPU]\n- [OTHER_METRICS]\n\n**Code to Analyze:**\n```[LANGUAGE]\n[PASTE_CODE_THAT_MIGHT_BE_CAUSING_ISSUES]",
+      "category": "Development",
+      "categoryId": "development",
+      "variables": [
+        "LANGUAGE",
+        "DESCRIBE_PERFORMANCE_PROBLEM",
+        "TIME",
+        "MEMORY",
+        "CPU",
+        "OTHER_METRICS",
+        "PASTE_CODE_THAT_MIGHT_BE_CAUSING_ISSUES"
+      ],
+      "tags": [
+        "development",
+        "coding",
+        "optimization"
+      ]
+    },
+    {
+      "id": "comprehensive-code-review",
+      "title": "Comprehensive Code Review",
+      "purpose": "To conduct a thorough code review focusing on multiple quality aspects.",
+      "template": "Please conduct a comprehensive code review of the following [LANGUAGE] code. Act as a senior developer performing a pull request review.\n\n**Code to Review:**\n```[LANGUAGE]\n[PASTE_CODE_HERE]",
+      "category": "Development",
+      "categoryId": "development",
+      "variables": [
+        "LANGUAGE",
+        "PASTE_CODE_HERE"
+      ],
+      "tags": [
+        "development",
+        "coding"
+      ]
+    },
+    {
+      "id": "generate-technical-documentation",
+      "title": "Generate Technical Documentation",
+      "purpose": "To create comprehensive technical documentation for code or systems.",
+      "template": "Create comprehensive technical documentation for the following [TYPE] (function/class/module/API/system).\n\n**Code/System to Document:**\n```[LANGUAGE]\n[PASTE_CODE_OR_DESCRIBE_SYSTEM]",
+      "category": "Development",
+      "categoryId": "development",
+      "variables": [
+        "TYPE",
+        "LANGUAGE",
+        "PASTE_CODE_OR_DESCRIBE_SYSTEM"
+      ],
+      "tags": [
+        "development",
+        "coding",
+        "documentation",
+        "generation"
+      ]
+    },
+    {
+      "id": "add-inline-code-comments",
+      "title": "Add Inline Code Comments",
+      "purpose": "To add clear, helpful comments to existing code.",
+      "template": "Please add comprehensive inline comments to the following [LANGUAGE] code. Focus on making the code self-documenting for developers who are [SKILL_LEVEL] with [LANGUAGE].\n\n**Code to Comment:**\n```[LANGUAGE]\n[PASTE_CODE_HERE]",
+      "category": "Development",
+      "categoryId": "development",
+      "variables": [
+        "LANGUAGE",
+        "SKILL_LEVEL",
+        "PASTE_CODE_HERE"
+      ],
+      "tags": [
+        "development",
+        "coding"
+      ]
+    },
+    {
+      "id": "genre-specific-lyric-generator",
+      "title": "Genre-Specific Lyric Generator",
+      "purpose": "To generate lyrics tailored to specific musical genres and themes.",
+      "template": "Act as a professional songwriter specializing in [GENRE] music. Write lyrics for a song with the following specifications:\n\n**Song Details:**\n- **Genre:** [GENRE] (e.g., pop, rock, country, hip-hop, folk, R&B)\n- **Theme/Topic:** [MAIN_THEME]\n- **Mood/Emotion:** [EMOTIONAL_TONE] (e.g., uplifting, melancholic, energetic, contemplative)\n- **Target Audience:** [AUDIENCE] (e.g., young adults, general audience, specific demographic)\n\n**Structure Requirements:**\n- **Song Length:** [APPROXIMATE_LENGTH] (e.g., 3-4 minutes, radio-friendly)\n- **Verse Count:** [NUMBER] verses\n- **Chorus:** [STYLE] (e.g., catchy and repetitive, anthemic, intimate)\n- **Bridge:** [INCLUDE/EXCLUDE] - [BRIDGE_STYLE] if included\n- **Other Sections:** [PRE_CHORUS/OUTRO/INTRO_REQUIREMENTS]\n\n**Lyrical Specifications:**\n- **Perspective:** [POINT_OF_VIEW] (1st person, 3rd person, storytelling)\n- **Rhyme Scheme:** [SCHEME] (ABAB, AABB, or flexible)\n- **Language Style:** [STYLE] (simple/accessible, poetic/metaphorical, conversational, edgy)\n- **Key Message:** [CORE_MESSAGE_OR_STORY]\n\n**Avoid:**\n- [CLICHES_TO_AVOID]\n- [TOPICS_TO_AVOID]\n- [LANGUAGE_RESTRICTIONS]\n\nPlease provide complete lyrics with clear section labels and suggest a potential title.",
+      "category": "Songwriting",
+      "categoryId": "songwriting",
+      "example": "Act as a professional songwriter specializing in indie folk music. Write lyrics for a song with the following specifications:\n\n**Song Details:**\n- **Genre:** Indie folk\n- **Theme/Topic:** Finding peace after a difficult breakup\n- **Mood/Emotion:** Bittersweet but ultimately hopeful\n- **Target Audience:** Young adults (20-35)\n\n**Structure Requirements:**\n- **Song Length:** 3-4 minutes, radio-friendly\n- **Verse Count:** 2 verses\n- **Chorus:** Intimate but memorable, not too anthemic\n- **Bridge:** Include - reflective and introspective\n- **Other Sections:** Simple intro, gentle outro\n\n**Lyrical Specifications:**\n- **Perspective:** 1st person, personal experience\n- **Rhyme Scheme:** Flexible, prioritize natural flow over strict rhyming\n- **Language Style:** Poetic but accessible, nature metaphors welcome\n- **Key Message:** Growth comes from letting go, finding strength in solitude\n\n**Avoid:**\n- Cliché breakup lines (\"you broke my heart\", \"love is blind\")\n- Overly dramatic or bitter language\n- References to specific technology or pop culture\n\nPlease provide complete lyrics with clear section labels and suggest a potential title.",
+      "variables": [
+        "GENRE",
+        "MAIN_THEME",
+        "EMOTIONAL_TONE",
+        "AUDIENCE",
+        "APPROXIMATE_LENGTH",
+        "NUMBER",
+        "STYLE",
+        "BRIDGE_STYLE",
+        "POINT_OF_VIEW",
+        "SCHEME",
+        "CORE_MESSAGE_OR_STORY",
+        "CLICHES_TO_AVOID",
+        "TOPICS_TO_AVOID",
+        "LANGUAGE_RESTRICTIONS"
+      ],
+      "tags": [
+        "songwriting",
+        "lyrics",
+        "genre",
+        "generation"
+      ]
+    },
+    {
+      "id": "lyric-improvement-and-refinement",
+      "title": "Lyric Improvement and Refinement",
+      "purpose": "To improve existing lyrics with specific focus areas.",
+      "template": "I need help refining and improving my song lyrics. Act as an experienced songwriter and lyric coach.\n\n**Current Lyrics:**",
+      "category": "Songwriting",
+      "categoryId": "songwriting",
+      "variables": [],
+      "tags": [
+        "songwriting",
+        "refactoring",
+        "lyrics"
+      ]
+    },
+    {
+      "id": "song-structure-planner",
+      "title": "Song Structure Planner",
+      "purpose": "To plan the overall structure and arrangement of a song.",
+      "template": "Help me plan the structure and arrangement for a [GENRE] song. Act as a music producer and songwriter.\n\n**Song Concept:**\n- **Title:** [WORKING_TITLE]\n- **Genre:** [GENRE]\n- **Tempo:** [BPM] BPM (or [TEMPO_DESCRIPTION] if unsure)\n- **Key:** [KEY] (or suggest appropriate key)\n- **Duration Target:** [LENGTH]\n- **Mood/Energy:** [ENERGY_DESCRIPTION]\n\n**Story/Theme:**\n[BRIEF_DESCRIPTION_OF_SONG_THEME_OR_STORY]\n\n**Arrangement Preferences:**\n- **Instrumentation:** [DESIRED_INSTRUMENTS]\n- **Vocal Style:** [VOCAL_APPROACH]\n- **Dynamics:** [DYNAMIC_RANGE] (e.g., consistent energy, builds from quiet to loud)\n- **Commercial Goals:** [RADIO_FRIENDLY/ARTISTIC/etc.]\n\n**Specific Requirements:**\n- [REQUIREMENT_1] (e.g., needs a strong hook within first 30 seconds)\n- [REQUIREMENT_2] (e.g., bridge should contrast significantly from verses)\n- [REQUIREMENT_3]\n\nPlease provide:\n1. **Recommended song structure** (with timing estimates)\n2. **Section-by-section arrangement notes** (instrumentation, dynamics, vocal approach)\n3. **Chord progression suggestions** for each section\n4. **Production tips** specific to the genre\n5. **Hook and catchiness strategies**",
+      "category": "Songwriting",
+      "categoryId": "songwriting",
+      "variables": [
+        "GENRE",
+        "WORKING_TITLE",
+        "BPM",
+        "TEMPO_DESCRIPTION",
+        "KEY",
+        "LENGTH",
+        "ENERGY_DESCRIPTION",
+        "BRIEF_DESCRIPTION_OF_SONG_THEME_OR_STORY",
+        "DESIRED_INSTRUMENTS",
+        "VOCAL_APPROACH",
+        "DYNAMIC_RANGE",
+        "REQUIREMENT_1",
+        "REQUIREMENT_2",
+        "REQUIREMENT_3"
+      ],
+      "tags": [
+        "songwriting",
+        "lyrics",
+        "structure",
+        "planning"
+      ]
+    },
+    {
+      "id": "chord-progression-generator",
+      "title": "Chord Progression Generator",
+      "purpose": "To generate chord progressions tailored to specific moods and genres.",
+      "template": "Create chord progressions for a [GENRE] song. Act as a music theory expert and composer.\n\n**Musical Requirements:**\n- **Key:** [KEY] (major/minor)\n- **Genre:** [GENRE]\n- **Mood:** [MOOD_DESCRIPTION]\n- **Tempo:** [TEMPO] (fast/medium/slow or specific BPM)\n- **Complexity Level:** [BEGINNER/INTERMEDIATE/ADVANCED]\n\n**Song Sections Needed:**\n- [ ] Verse progression\n- [ ] Chorus progression  \n- [ ] Bridge progression\n- [ ] Pre-chorus (if applicable)\n- [ ] Intro/Outro variations\n\n**Preferences:**\n- **Chord Types:** [TRIADS_ONLY/SEVENTH_CHORDS/EXTENSIONS_WELCOME]\n- **Movement Style:** [SMOOTH_VOICE_LEADING/DRAMATIC_JUMPS/MIXED]\n- **Borrowing:** [ALLOW_BORROWED_CHORDS] from related keys\n- **Modulation:** [INCLUDE/AVOID] key changes\n\n**Inspiration/Reference:**\n- Chord progressions similar to: [REFERENCE_SONGS] (optional)\n- Avoid progressions that sound like: [SONGS_TO_AVOID] (optional)\n\nPlease provide:\n1. **Chord progressions** for each section (both Roman numerals and chord names)\n2. **Strumming/rhythm suggestions** appropriate for the genre\n3. **Voice leading notes** for smooth transitions\n4. **Alternative variations** for added interest\n5. **Capo/fingering suggestions** if acoustic guitar is involved",
+      "category": "Songwriting",
+      "categoryId": "songwriting",
+      "variables": [
+        "GENRE",
+        "KEY",
+        "MOOD_DESCRIPTION",
+        "TEMPO",
+        "ALLOW_BORROWED_CHORDS",
+        "REFERENCE_SONGS",
+        "SONGS_TO_AVOID"
+      ],
+      "tags": [
+        "songwriting",
+        "genre",
+        "generation"
+      ]
+    },
+    {
+      "id": "story-concept-generator",
+      "title": "Story Concept Generator",
+      "purpose": "To generate complete story concepts with plot, characters, and setting.",
+      "template": "Create a compelling story concept for a [GENRE] [FORMAT]. Act as a creative writing expert and story developer.\n\n**Story Parameters:**\n- **Genre:** [GENRE] (e.g., mystery, sci-fi, romance, historical fiction, fantasy)\n- **Format:** [FORMAT] (short story, novella, novel, screenplay, etc.)\n- **Target Length:** [LENGTH] (word count or page count)\n- **Target Audience:** [AUDIENCE] (YA, adult, children, specific demographic)\n- **Tone:** [TONE] (dark, humorous, serious, whimsical, gritty)\n\n**Theme/Message Requirements:**\n- **Central Theme:** [THEME] (optional - e.g., redemption, coming of age, social justice)\n- **Message/Takeaway:** [MESSAGE] (what should readers learn or feel?)\n\n**Setting Preferences:**\n- **Time Period:** [TIME] (contemporary, historical period, future, fantasy time)\n- **Location:** [SETTING] (urban, rural, fictional world, specific real location)\n- **World-building Complexity:** [SIMPLE/MODERATE/EXTENSIVE]\n\n**Story Elements to Include:**\n- [REQUIRED_ELEMENT_1] (e.g., must include a mystery, romantic subplot, etc.)\n- [REQUIRED_ELEMENT_2]\n- [REQUIRED_ELEMENT_3]\n\n**Constraints/Restrictions:**\n- Avoid: [ELEMENTS_TO_AVOID]\n- Content rating: [RATING] (G, PG, PG-13, R, etc.)\n\nPlease provide:\n1. **Compelling logline** (1-2 sentences)\n2. **Main plot outline** (beginning, middle, end)\n3. **Primary characters** (protagonist, antagonist, key supporting characters)\n4. **Setting and world details**\n5. **Central conflict and stakes**\n6. **Unique hook** (what makes this story stand out)\n7. **Potential subplots**",
+      "category": "Creative Writing",
+      "categoryId": "creative-writing",
+      "variables": [
+        "GENRE",
+        "FORMAT",
+        "LENGTH",
+        "AUDIENCE",
+        "TONE",
+        "THEME",
+        "MESSAGE",
+        "TIME",
+        "SETTING",
+        "REQUIRED_ELEMENT_1",
+        "REQUIRED_ELEMENT_2",
+        "REQUIRED_ELEMENT_3",
+        "ELEMENTS_TO_AVOID",
+        "RATING"
+      ],
+      "tags": [
+        "creative writing",
+        "storytelling",
+        "characters",
+        "scenes",
+        "explanation",
+        "generation"
+      ]
+    },
+    {
+      "id": "plot-problem-solver",
+      "title": "Plot Problem Solver",
+      "purpose": "To solve specific plotting issues or story problems.",
+      "template": "I need help solving a plotting issue in my [GENRE] story. Act as a story consultant and plot doctor.\n\n**Current Story Context:**\n[BRIEF_SUMMARY_OF_YOUR_STORY_SO_FAR]\n\n**The Problem:**\n[DETAILED_DESCRIPTION_OF_THE_PLOTTING_ISSUE]\n\n**Story Details:**\n- **Genre:** [GENRE]\n- **Target Audience:** [AUDIENCE] \n- **Story Length:** [LENGTH]\n- **Point of View:** [POV]\n- **Tone:** [TONE]\n\n**Key Characters Involved:**\n- **Protagonist:** [BRIEF_DESCRIPTION]\n- **Antagonist:** [BRIEF_DESCRIPTION]\n- **Others:** [OTHER_RELEVANT_CHARACTERS]\n\n**Constraints:**\n- Must maintain: [ELEMENTS_THAT_CANNOT_CHANGE]\n- Story structure: [ACTS/CHAPTERS_ESTABLISHED]\n- Established character motivations: [KEY_MOTIVATIONS]\n\n**Potential Solutions I've Considered:**\n1. [SOLUTION_ATTEMPT_1] - [WHY_IT_DOESN'T_WORK]\n2. [SOLUTION_ATTEMPT_2] - [WHY_IT_DOESN'T_WORK]\n\nPlease provide:\n1. **Analysis of the core issue**\n2. **3-5 potential solutions** with pros and cons\n3. **Recommended approach** and reasoning\n4. **Implementation strategy** (how to execute the solution)\n5. **Potential ripple effects** on other story elements",
+      "category": "Creative Writing",
+      "categoryId": "creative-writing",
+      "variables": [
+        "GENRE",
+        "BRIEF_SUMMARY_OF_YOUR_STORY_SO_FAR",
+        "DETAILED_DESCRIPTION_OF_THE_PLOTTING_ISSUE",
+        "AUDIENCE",
+        "LENGTH",
+        "POV",
+        "TONE",
+        "BRIEF_DESCRIPTION",
+        "OTHER_RELEVANT_CHARACTERS",
+        "ELEMENTS_THAT_CANNOT_CHANGE",
+        "KEY_MOTIVATIONS",
+        "SOLUTION_ATTEMPT_1",
+        "SOLUTION_ATTEMPT_2"
+      ],
+      "tags": [
+        "creative writing",
+        "storytelling"
+      ]
+    },
+    {
+      "id": "character-development-deep-dive",
+      "title": "Character Development Deep Dive",
+      "purpose": "To create rich, multi-dimensional characters with depth and authenticity.",
+      "template": "Create a detailed character profile for my [GENRE] story. Act as a character development specialist.\n\n**Basic Character Information:**\n- **Role in Story:** [PROTAGONIST/ANTAGONIST/SUPPORTING/etc.]\n- **Age:** [AGE] or [AGE_RANGE]\n- **Gender:** [GENDER]\n- **Occupation:** [JOB] (current or most relevant)\n\n**Story Context:**\n- **Genre:** [GENRE]\n- **Setting:** [TIME_PERIOD_AND_LOCATION]\n- **Story Theme:** [MAIN_THEME]\n- **Character's Role in Theme:** [HOW_CHARACTER_RELATES_TO_THEME]\n\n**Character Requirements:**\n- **Personality Archetype:** [ARCHETYPE] (mentor, rebel, innocent, etc.) - optional\n- **Primary Goal:** [WHAT_CHARACTER_WANTS_MOST]\n- **Greatest Fear:** [BIGGEST_FEAR]\n- **Fatal Flaw:** [CHARACTER_WEAKNESS]\n- **Character Arc:** [HOW_SHOULD_CHARACTER_CHANGE] from beginning to end\n\n**Relationships:**\n- **Key Relationships:** [IMPORTANT_PEOPLE_IN_CHARACTER'S_LIFE]\n- **Conflict Sources:** [WHO_OR_WHAT_OPPOSES_CHARACTER]\n\n**Specific Traits Needed:**\n- [REQUIRED_TRAIT_1] (e.g., must be skilled in martial arts)\n- [REQUIRED_TRAIT_2] (e.g., has a secret that drives the plot)\n- [REQUIRED_TRAIT_3]\n\nPlease provide:\n1. **Complete character profile** including backstory, personality, appearance\n2. **Psychological depth** - motivations, fears, contradictions\n3. **Speaking style and mannerisms**\n4. **Character arc progression** throughout the story\n5. **Relationship dynamics** with other characters\n6. **Unique details** that make the character memorable\n7. **Potential dialogue samples** in the character's voice",
+      "category": "Creative Writing",
+      "categoryId": "creative-writing",
+      "variables": [
+        "GENRE",
+        "AGE",
+        "AGE_RANGE",
+        "GENDER",
+        "JOB",
+        "TIME_PERIOD_AND_LOCATION",
+        "MAIN_THEME",
+        "HOW_CHARACTER_RELATES_TO_THEME",
+        "ARCHETYPE",
+        "WHAT_CHARACTER_WANTS_MOST",
+        "BIGGEST_FEAR",
+        "CHARACTER_WEAKNESS",
+        "HOW_SHOULD_CHARACTER_CHANGE",
+        "WHO_OR_WHAT_OPPOSES_CHARACTER",
+        "REQUIRED_TRAIT_1",
+        "REQUIRED_TRAIT_2",
+        "REQUIRED_TRAIT_3"
+      ],
+      "tags": [
+        "creative writing",
+        "characters",
+        "generation"
+      ]
+    },
+    {
+      "id": "project-scope-and-planning",
+      "title": "Project Scope and Planning",
+      "purpose": "To create comprehensive project plans with clear scope and deliverables.",
+      "template": "Help me create a comprehensive project plan. Act as an experienced project manager and business analyst.\n\n**Project Overview:**\n- **Project Name:** [PROJECT_NAME]\n- **Project Type:** [TYPE] (software development, marketing campaign, product launch, etc.)\n- **Duration:** [ESTIMATED_TIMELINE]\n- **Budget Range:** [BUDGET] (if applicable)\n- **Team Size:** [TEAM_SIZE] people\n\n**Business Context:**\n- **Primary Goal:** [MAIN_OBJECTIVE]\n- **Success Metrics:** [HOW_SUCCESS_WILL_BE_MEASURED]\n- **Target Audience/Users:** [WHO_WILL_BENEFIT]\n- **Business Value:** [WHY_THIS_PROJECT_MATTERS]\n\n**Project Requirements:**\n- **Must Have Features/Deliverables:**\n  - [REQUIREMENT_1]\n  - [REQUIREMENT_2]\n  - [REQUIREMENT_3]\n- **Nice to Have Features:**\n  - [NICE_TO_HAVE_1]\n  - [NICE_TO_HAVE_2]\n\n**Constraints:**\n- **Timeline Constraints:** [DEADLINES_OR_TIME_LIMITS]\n- **Budget Constraints:** [FINANCIAL_LIMITATIONS]\n- **Resource Constraints:** [TEAM_OR_SKILL_LIMITATIONS]\n- **Technical Constraints:** [TECHNOLOGY_OR_PLATFORM_LIMITATIONS]\n\n**Stakeholders:**\n- **Project Sponsor:** [SPONSOR_ROLE]\n- **End Users:** [USER_DESCRIPTION]\n- **Other Stakeholders:** [OTHER_INTERESTED_PARTIES]\n\nPlease provide:\n1. **Detailed project scope** with clear boundaries\n2. **Work breakdown structure** (main phases and tasks)\n3. **Timeline and milestones** with dependencies\n4. **Resource allocation** and team roles\n5. **Risk assessment** and mitigation strategies\n6. **Communication plan** and reporting structure\n7. **Success criteria** and acceptance criteria",
+      "category": "Business/Project",
+      "categoryId": "business-project",
+      "variables": [
+        "PROJECT_NAME",
+        "TYPE",
+        "ESTIMATED_TIMELINE",
+        "BUDGET",
+        "TEAM_SIZE",
+        "MAIN_OBJECTIVE",
+        "HOW_SUCCESS_WILL_BE_MEASURED",
+        "WHO_WILL_BENEFIT",
+        "WHY_THIS_PROJECT_MATTERS",
+        "REQUIREMENT_1",
+        "REQUIREMENT_2",
+        "REQUIREMENT_3",
+        "NICE_TO_HAVE_1",
+        "NICE_TO_HAVE_2",
+        "DEADLINES_OR_TIME_LIMITS",
+        "FINANCIAL_LIMITATIONS",
+        "TEAM_OR_SKILL_LIMITATIONS",
+        "TECHNOLOGY_OR_PLATFORM_LIMITATIONS",
+        "SPONSOR_ROLE",
+        "USER_DESCRIPTION",
+        "OTHER_INTERESTED_PARTIES"
+      ],
+      "tags": [
+        "business/project",
+        "planning",
+        "generation"
+      ]
+    },
+    {
+      "id": "user-story-creation",
+      "title": "User Story Creation",
+      "purpose": "To create detailed user stories with acceptance criteria for development projects.",
+      "template": "Create detailed user stories for the following feature. Act as a product manager and business analyst.\n\n**Feature Overview:**\n- **Feature Name:** [FEATURE_NAME]\n- **Product/System:** [PRODUCT_NAME]\n- **Feature Priority:** [HIGH/MEDIUM/LOW]\n- **Target Release:** [RELEASE_VERSION_OR_DATE]\n\n**User Context:**\n- **Primary User Type:** [USER_ROLE] (e.g., end customer, admin, content creator)\n- **User Skill Level:** [TECHNICAL_PROFICIENCY]\n- **Usage Context:** [WHEN_AND_WHERE_USED]\n- **User Goals:** [WHAT_USER_WANTS_TO_ACCOMPLISH]\n\n**Functional Requirements:**\n- [REQUIREMENT_1]\n- [REQUIREMENT_2]\n- [REQUIREMENT_3]\n\n**Business Requirements:**\n- **Business Value:** [WHY_THIS_FEATURE_IS_NEEDED]\n- **Success Metrics:** [HOW_SUCCESS_WILL_BE_MEASURED]\n- **Business Rules:** [ANY_CONSTRAINTS_OR_RULES]\n\n**Technical Context:**\n- **Platform:** [WEB/MOBILE/DESKTOP/API]\n- **Integration Points:** [SYSTEMS_TO_INTEGRATE_WITH]\n- **Performance Requirements:** [SPEED_OR_SCALE_REQUIREMENTS]\n\n**Design Constraints:**\n- [DESIGN_CONSTRAINT_1]\n- [DESIGN_CONSTRAINT_2]\n\nPlease provide:\n1. **Epic-level user story** (high-level feature description)\n2. **Detailed user stories** in \"As a [user], I want [goal] so that [benefit]\" format\n3. **Acceptance criteria** for each story (Given/When/Then format)\n4. **Edge cases and error scenarios**\n5. **Dependencies** on other features or systems\n6. **Definition of Done** checklist\n7. **Testing scenarios** (positive and negative cases)",
+      "category": "Business/Project",
+      "categoryId": "business-project",
+      "variables": [
+        "FEATURE_NAME",
+        "PRODUCT_NAME",
+        "RELEASE_VERSION_OR_DATE",
+        "USER_ROLE",
+        "TECHNICAL_PROFICIENCY",
+        "WHEN_AND_WHERE_USED",
+        "WHAT_USER_WANTS_TO_ACCOMPLISH",
+        "REQUIREMENT_1",
+        "REQUIREMENT_2",
+        "REQUIREMENT_3",
+        "WHY_THIS_FEATURE_IS_NEEDED",
+        "HOW_SUCCESS_WILL_BE_MEASURED",
+        "ANY_CONSTRAINTS_OR_RULES",
+        "SYSTEMS_TO_INTEGRATE_WITH",
+        "SPEED_OR_SCALE_REQUIREMENTS",
+        "DESIGN_CONSTRAINT_1",
+        "DESIGN_CONSTRAINT_2"
+      ],
+      "tags": [
+        "business/project",
+        "storytelling",
+        "planning",
+        "generation"
+      ]
+    },
+    {
+      "id": "comprehensive-research-brief",
+      "title": "Comprehensive Research Brief",
+      "purpose": "To create structured research plans for investigating topics or problems.",
+      "template": "Create a comprehensive research plan for investigating [RESEARCH_TOPIC]. Act as a research methodologist and subject matter expert.\n\n**Research Objective:**\n- **Primary Question:** [MAIN_RESEARCH_QUESTION]\n- **Secondary Questions:**\n  - [SECONDARY_QUESTION_1]\n  - [SECONDARY_QUESTION_2]\n  - [SECONDARY_QUESTION_3]\n\n**Research Context:**\n- **Background:** [WHAT_WE_ALREADY_KNOW]\n- **Purpose:** [WHY_THIS_RESEARCH_IS_NEEDED]\n- **Target Audience:** [WHO_WILL_USE_THE_RESULTS]\n- **Deadline:** [WHEN_RESULTS_ARE_NEEDED]\n\n**Scope and Constraints:**\n- **Scope:** [WHAT_IS_INCLUDED_IN_THE_RESEARCH]\n- **Out of Scope:** [WHAT_IS_EXPLICITLY_EXCLUDED]\n- **Resource Constraints:** [TIME/BUDGET/ACCESS_LIMITATIONS]\n- **Quality Requirements:** [DEPTH_AND_RELIABILITY_NEEDED]\n\n**Research Focus Areas:**\n- [FOCUS_AREA_1] - [WHY_IMPORTANT]\n- [FOCUS_AREA_2] - [WHY_IMPORTANT]\n- [FOCUS_AREA_3] - [WHY_IMPORTANT]\n\n**Preferred Sources:**\n- **Primary Sources:** [ORIGINAL_DATA_SOURCES]\n- **Secondary Sources:** [ANALYSIS_AND_COMMENTARY]\n- **Source Credibility Requirements:** [QUALITY_STANDARDS]\n\nPlease provide:\n1. **Detailed research methodology** and approach\n2. **Source identification strategy** (where to find information)\n3. **Research timeline** with milestones\n4. **Data collection framework** (what to look for)\n5. **Analysis framework** (how to evaluate findings)\n6. **Quality assurance** methods for reliability\n7. **Deliverable structure** (how to present findings)\n8. **Potential challenges** and mitigation strategies",
+      "category": "Learning and Analysis",
+      "categoryId": "learning-and-analysis",
+      "variables": [
+        "RESEARCH_TOPIC",
+        "MAIN_RESEARCH_QUESTION",
+        "SECONDARY_QUESTION_1",
+        "SECONDARY_QUESTION_2",
+        "SECONDARY_QUESTION_3",
+        "WHAT_WE_ALREADY_KNOW",
+        "WHY_THIS_RESEARCH_IS_NEEDED",
+        "WHO_WILL_USE_THE_RESULTS",
+        "WHEN_RESULTS_ARE_NEEDED",
+        "WHAT_IS_INCLUDED_IN_THE_RESEARCH",
+        "WHAT_IS_EXPLICITLY_EXCLUDED",
+        "DEPTH_AND_RELIABILITY_NEEDED",
+        "FOCUS_AREA_1",
+        "WHY_IMPORTANT",
+        "FOCUS_AREA_2",
+        "FOCUS_AREA_3",
+        "ORIGINAL_DATA_SOURCES",
+        "ANALYSIS_AND_COMMENTARY",
+        "QUALITY_STANDARDS"
+      ],
+      "tags": [
+        "learning and analysis",
+        "structure",
+        "planning",
+        "research",
+        "generation"
+      ]
+    },
+    {
+      "id": "educational-content-creator",
+      "title": "Educational Content Creator",
+      "purpose": "To create clear, educational explanations of complex concepts.",
+      "template": "Create educational content explaining [CONCEPT/TOPIC]. Act as an expert educator and curriculum designer.\n\n**Content Specifications:**\n- **Topic:** [SPECIFIC_CONCEPT_OR_SKILL]\n- **Target Audience:** [AUDIENCE_DESCRIPTION_AND_SKILL_LEVEL]\n- **Content Format:** [TUTORIAL/EXPLANATION/GUIDE/COURSE_MODULE]\n- **Content Length:** [WORD_COUNT_OR_TIME_ESTIMATE]\n- **Delivery Medium:** [WRITTEN/VIDEO_SCRIPT/INTERACTIVE/etc.]\n\n**Learning Objectives:**\nAfter completing this content, learners should be able to:\n- [LEARNING_OBJECTIVE_1]\n- [LEARNING_OBJECTIVE_2]\n- [LEARNING_OBJECTIVE_3]\n\n**Audience Analysis:**\n- **Prior Knowledge:** [WHAT_AUDIENCE_ALREADY_KNOWS]\n- **Knowledge Gaps:** [WHAT_THEY_DON'T_KNOW]\n- **Learning Style Preferences:** [VISUAL/AUDITORY/HANDS_ON/etc.]\n- **Common Misconceptions:** [TYPICAL_MISUNDERSTANDINGS]\n\n**Content Requirements:**\n- **Complexity Level:** [BEGINNER/INTERMEDIATE/ADVANCED]\n- **Practical Application:** [HOW_CONCEPT_IS_USED_IN_REAL_WORLD]\n- **Examples Needed:** [TYPES_OF_EXAMPLES_TO_INCLUDE]\n- **Interactive Elements:** [EXERCISES/QUIZZES/ACTIVITIES_NEEDED]\n\n**Constraints:**\n- **Time Constraints:** [LEARNING_TIME_LIMITATIONS]\n- **Prerequisites:** [REQUIRED_PRIOR_KNOWLEDGE]\n- **Accessibility:** [SPECIAL_ACCESSIBILITY_NEEDS]\n\nPlease provide:\n1. **Content outline** with logical progression\n2. **Detailed explanation** with clear, simple language\n3. **Relevant examples** and analogies\n4. **Practical exercises** or applications\n5. **Assessment questions** to check understanding\n6. **Common pitfalls** and how to avoid them\n7. **Additional resources** for deeper learning\n8. **Summary** and key takeaways",
+      "category": "Learning and Analysis",
+      "categoryId": "learning-and-analysis",
+      "variables": [
+        "SPECIFIC_CONCEPT_OR_SKILL",
+        "AUDIENCE_DESCRIPTION_AND_SKILL_LEVEL",
+        "WORD_COUNT_OR_TIME_ESTIMATE",
+        "LEARNING_OBJECTIVE_1",
+        "LEARNING_OBJECTIVE_2",
+        "LEARNING_OBJECTIVE_3",
+        "WHAT_AUDIENCE_ALREADY_KNOWS",
+        "TYPICAL_MISUNDERSTANDINGS",
+        "HOW_CONCEPT_IS_USED_IN_REAL_WORLD",
+        "TYPES_OF_EXAMPLES_TO_INCLUDE",
+        "LEARNING_TIME_LIMITATIONS",
+        "REQUIRED_PRIOR_KNOWLEDGE",
+        "SPECIAL_ACCESSIBILITY_NEEDS"
+      ],
+      "tags": [
+        "learning and analysis",
+        "planning",
+        "learning",
+        "explanation",
+        "generation"
+      ]
+    },
+    {
+      "id": "custom-prompt-generator",
+      "title": "Custom Prompt Generator",
+      "purpose": "To create specialized prompts for specific tasks or domains.",
+      "template": "Create a custom prompt template for [SPECIFIC_TASK_OR_DOMAIN]. Act as a prompt engineering expert.\n\n**Task Description:**\n[DETAILED_DESCRIPTION_OF_THE_TASK_THE_PROMPT_SHOULD_ACCOMPLISH]\n\n**Use Case Context:**\n- **Domain:** [FIELD_OR_INDUSTRY] (e.g., marketing, education, software development)\n- **User Type:** [WHO_WILL_USE_THIS_PROMPT] (skill level, role, context)\n- **Frequency of Use:** [HOW_OFTEN_PROMPT_WILL_BE_USED]\n- **Output Requirements:** [WHAT_TYPE_OF_OUTPUT_IS_EXPECTED]\n\n**Prompt Requirements:**\n- **AI Role:** [WHAT_PERSONA_SHOULD_AI_ADOPT]\n- **Input Variables:** [WHAT_INFORMATION_USER_NEEDS_TO_PROVIDE]\n- **Output Format:** [STRUCTURE_OF_DESIRED_RESPONSE]\n- **Quality Standards:** [CRITERIA_FOR_GOOD_OUTPUT]\n\n**Constraints:**\n- **Length Limitations:** [MAX_PROMPT_LENGTH_OR_OUTPUT_LENGTH]\n- **Complexity Level:** [SIMPLE/MODERATE/COMPLEX]\n- **Special Requirements:** [UNIQUE_NEEDS_OR_CONSTRAINTS]\n\n**Examples of Good Outputs:**\n[PROVIDE_1_2_EXAMPLES_OF_DESIRED_RESULTS]\n\nPlease provide:\n1. **Complete prompt template** with clear [VARIABLE] placeholders\n2. **Usage instructions** for filling in variables\n3. **Example implementation** with variables filled in\n4. **Expected output description**\n5. **Customization tips** for different use cases\n6. **Common pitfalls** to avoid when using the prompt\n7. **Variations** for different scenarios or skill levels",
+      "category": "Learning and Analysis",
+      "categoryId": "learning-and-analysis",
+      "variables": [
+        "SPECIFIC_TASK_OR_DOMAIN",
+        "DETAILED_DESCRIPTION_OF_THE_TASK_THE_PROMPT_SHOULD_ACCOMPLISH",
+        "FIELD_OR_INDUSTRY",
+        "WHO_WILL_USE_THIS_PROMPT",
+        "HOW_OFTEN_PROMPT_WILL_BE_USED",
+        "WHAT_TYPE_OF_OUTPUT_IS_EXPECTED",
+        "WHAT_PERSONA_SHOULD_AI_ADOPT",
+        "WHAT_INFORMATION_USER_NEEDS_TO_PROVIDE",
+        "STRUCTURE_OF_DESIRED_RESPONSE",
+        "CRITERIA_FOR_GOOD_OUTPUT",
+        "MAX_PROMPT_LENGTH_OR_OUTPUT_LENGTH",
+        "UNIQUE_NEEDS_OR_CONSTRAINTS",
+        "PROVIDE_1_2_EXAMPLES_OF_DESIRED_RESULTS",
+        "VARIABLE"
+      ],
+      "tags": [
+        "learning and analysis",
+        "meta",
+        "generation"
+      ]
+    },
+    {
+      "id": "prompt-optimization-and-improvement",
+      "title": "Prompt Optimization and Improvement",
+      "purpose": "To analyze and improve existing prompts for better results.",
+      "template": "Analyze and improve the following prompt. Act as a prompt engineering specialist.\n\n**Current Prompt:**",
+      "category": "Learning and Analysis",
+      "categoryId": "learning-and-analysis",
+      "variables": [],
+      "tags": [
+        "learning and analysis",
+        "refactoring",
+        "meta"
+      ]
+    },
+    {
+      "id": "architecture-and-system-design",
+      "title": "Architecture and System Design",
+      "purpose": "To design software architecture and system components.",
+      "template": "Design a software architecture for [SYSTEM_TYPE]. Act as a senior software architect.\n\n**System Requirements:**\n- **System Purpose:** [WHAT_THE_SYSTEM_DOES]\n- **Scale:** [EXPECTED_USERS/LOAD/DATA_VOLUME]\n- **Performance Requirements:** [SPEED/THROUGHPUT/LATENCY_NEEDS]\n- **Availability Requirements:** [UPTIME_EXPECTATIONS]\n- **Security Requirements:** [SECURITY_LEVEL_AND_COMPLIANCE]\n\n**Technical Constraints:**\n- **Technology Stack:** [PREFERRED_OR_REQUIRED_TECHNOLOGIES]\n- **Platform:** [CLOUD/ON_PREMISE/HYBRID]\n- **Budget Constraints:** [COST_LIMITATIONS]\n- **Team Expertise:** [TEAM_SKILL_LEVELS]\n- **Timeline:** [DEVELOPMENT_TIMELINE]\n\n**Functional Requirements:**\n- [CORE_FEATURE_1]\n- [CORE_FEATURE_2]\n- [CORE_FEATURE_3]\n- [INTEGRATION_REQUIREMENTS]\n\n**Non-Functional Requirements:**\n- **Scalability:** [GROWTH_EXPECTATIONS]\n- **Maintainability:** [MAINTENANCE_CONSIDERATIONS]\n- **Reliability:** [ERROR_TOLERANCE]\n- **Monitoring:** [OBSERVABILITY_NEEDS]\n\nPlease provide:\n1. **High-level architecture diagram** (described in text)\n2. **Component breakdown** with responsibilities\n3. **Data flow** and interaction patterns\n4. **Technology recommendations** with justifications\n5. **Scalability strategy** for future growth\n6. **Security architecture** and considerations\n7. **Deployment strategy** and infrastructure needs\n8. **Risk assessment** and mitigation strategies",
+      "category": "Learning and Analysis",
+      "categoryId": "learning-and-analysis",
+      "variables": [
+        "SYSTEM_TYPE",
+        "WHAT_THE_SYSTEM_DOES",
+        "UPTIME_EXPECTATIONS",
+        "SECURITY_LEVEL_AND_COMPLIANCE",
+        "PREFERRED_OR_REQUIRED_TECHNOLOGIES",
+        "COST_LIMITATIONS",
+        "TEAM_SKILL_LEVELS",
+        "DEVELOPMENT_TIMELINE",
+        "CORE_FEATURE_1",
+        "CORE_FEATURE_2",
+        "CORE_FEATURE_3",
+        "INTEGRATION_REQUIREMENTS",
+        "GROWTH_EXPECTATIONS",
+        "MAINTENANCE_CONSIDERATIONS",
+        "ERROR_TOLERANCE",
+        "OBSERVABILITY_NEEDS"
+      ],
+      "tags": [
+        "learning and analysis"
+      ]
+    },
+    {
+      "id": "api-design-and-documentation",
+      "title": "API Design and Documentation",
+      "purpose": "To design and document APIs with clear specifications.",
+      "template": "Design a RESTful API for [API_PURPOSE]. Act as an API architect and technical writer.\n\n**API Overview:**\n- **Purpose:** [WHAT_THE_API_DOES]\n- **Target Users:** [DEVELOPERS/SYSTEMS_THAT_WILL_USE_IT]\n- **Authentication:** [AUTH_METHOD] (API key, OAuth, JWT, etc.)\n- **Rate Limiting:** [REQUESTS_PER_MINUTE/HOUR]\n- **Versioning Strategy:** [HOW_VERSIONS_WILL_BE_MANAGED]\n\n**Core Resources:**\n- **Resource 1:** [RESOURCE_NAME] - [DESCRIPTION]\n- **Resource 2:** [RESOURCE_NAME] - [DESCRIPTION]\n- **Resource 3:** [RESOURCE_NAME] - [DESCRIPTION]\n\n**Key Operations:**\n- [OPERATION_1] (e.g., Create user account)\n- [OPERATION_2] (e.g., Retrieve user profile)\n- [OPERATION_3] (e.g., Update user settings)\n- [OPERATION_4] (e.g., Delete user data)\n\n**Data Requirements:**\n- **Input Validation:** [VALIDATION_RULES]\n- **Output Formats:** [JSON/XML/etc.]\n- **Pagination:** [HOW_LARGE_DATASETS_ARE_HANDLED]\n- **Filtering/Sorting:** [QUERY_CAPABILITIES]\n\n**Quality Requirements:**\n- **Response Time:** [PERFORMANCE_EXPECTATIONS]\n- **Error Handling:** [HOW_ERRORS_ARE_COMMUNICATED]\n- **Documentation Style:** [OPENAPI/SWAGGER/CUSTOM]\n\nPlease provide:\n1. **Complete API specification** with endpoints\n2. **Request/response examples** for each endpoint\n3. **Error codes and messages** documentation\n4. **Authentication flow** explanation\n5. **SDK/client library considerations**\n6. **Testing strategy** for the API\n7. **Versioning and deprecation** policy",
+      "category": "Learning and Analysis",
+      "categoryId": "learning-and-analysis",
+      "variables": [
+        "API_PURPOSE",
+        "WHAT_THE_API_DOES",
+        "AUTH_METHOD",
+        "HOW_VERSIONS_WILL_BE_MANAGED",
+        "RESOURCE_NAME",
+        "DESCRIPTION",
+        "OPERATION_1",
+        "OPERATION_2",
+        "OPERATION_3",
+        "OPERATION_4",
+        "VALIDATION_RULES",
+        "HOW_LARGE_DATASETS_ARE_HANDLED",
+        "QUERY_CAPABILITIES",
+        "PERFORMANCE_EXPECTATIONS",
+        "HOW_ERRORS_ARE_COMMUNICATED"
+      ],
+      "tags": [
+        "learning and analysis",
+        "documentation",
+        "requirements"
+      ]
+    },
+    {
+      "id": "test-case-generator",
+      "title": "Test Case Generator",
+      "purpose": "To generate comprehensive test cases for software features.",
+      "template": "Generate comprehensive test cases for [FEATURE_OR_FUNCTION]. Act as a QA engineer and test specialist.\n\n**Feature Under Test:**\n[DETAILED_DESCRIPTION_OF_FEATURE_OR_FUNCTION]\n\n**Test Scope:**\n- **Functional Testing:** [INCLUDE/EXCLUDE]\n- **Performance Testing:** [INCLUDE/EXCLUDE]\n- **Security Testing:** [INCLUDE/EXCLUDE]\n- **Usability Testing:** [INCLUDE/EXCLUDE]\n- **Compatibility Testing:** [INCLUDE/EXCLUDE]\n\n**Test Environment:**\n- **Platform(s):** [PLATFORMS_TO_TEST_ON]\n- **Browsers/Devices:** [IF_APPLICABLE]\n- **Test Data Requirements:** [WHAT_DATA_IS_NEEDED]\n- **Prerequisites:** [SETUP_REQUIREMENTS]\n\n**User Scenarios:**\n- **Primary User Flow:** [MAIN_USER_JOURNEY]\n- **Alternative Flows:** [OTHER_WAYS_USERS_MIGHT_INTERACT]\n- **Edge Cases:** [UNUSUAL_BUT_POSSIBLE_SCENARIOS]\n\n**Acceptance Criteria:**\n- [CRITERIA_1]\n- [CRITERIA_2]\n- [CRITERIA_3]\n\n**Risk Areas:**\n- [HIGH_RISK_AREA_1] - [WHY_RISKY]\n- [HIGH_RISK_AREA_2] - [WHY_RISKY]\n\nPlease provide:\n1. **Positive test cases** (happy path scenarios)\n2. **Negative test cases** (error conditions and invalid inputs)\n3. **Edge cases and boundary testing**\n4. **Performance test scenarios** (if applicable)\n5. **Security test cases** (if applicable)\n6. **Test data requirements** and setup instructions\n7. **Expected results** for each test case\n8. **Priority levels** for test execution",
+      "category": "Learning and Analysis",
+      "categoryId": "learning-and-analysis",
+      "variables": [
+        "FEATURE_OR_FUNCTION",
+        "DETAILED_DESCRIPTION_OF_FEATURE_OR_FUNCTION",
+        "PLATFORMS_TO_TEST_ON",
+        "IF_APPLICABLE",
+        "WHAT_DATA_IS_NEEDED",
+        "SETUP_REQUIREMENTS",
+        "MAIN_USER_JOURNEY",
+        "OTHER_WAYS_USERS_MIGHT_INTERACT",
+        "UNUSUAL_BUT_POSSIBLE_SCENARIOS",
+        "CRITERIA_1",
+        "CRITERIA_2",
+        "CRITERIA_3",
+        "HIGH_RISK_AREA_1",
+        "WHY_RISKY",
+        "HIGH_RISK_AREA_2"
+      ],
+      "tags": [
+        "learning and analysis",
+        "testing",
+        "generation"
+      ]
+    },
+    {
+      "id": "code-coverage-and-testing-strategy",
+      "title": "Code Coverage and Testing Strategy",
+      "purpose": "To develop comprehensive testing strategies for code projects.",
+      "template": "Create a testing strategy for my [LANGUAGE] project. Act as a test automation engineer and QA strategist.\n\n**Project Details:**\n- **Project Type:** [WEB_APP/MOBILE_APP/API/LIBRARY/etc.]\n- **Technology Stack:** [FRAMEWORKS_AND_TOOLS]\n- **Team Size:** [NUMBER_OF_DEVELOPERS]\n- **Release Frequency:** [HOW_OFTEN_RELEASES_HAPPEN]\n- **Quality Requirements:** [QUALITY_STANDARDS]\n\n**Current State:**\n- **Existing Tests:** [WHAT_TESTS_ALREADY_EXIST]\n- **Current Coverage:** [COVERAGE_PERCENTAGE] (if known)\n- **Pain Points:** [CURRENT_TESTING_CHALLENGES]\n- **Time Constraints:** [AVAILABLE_TIME_FOR_TESTING]\n\n**Code Characteristics:**\n- **Complexity Level:** [SIMPLE/MODERATE/COMPLEX]\n- **Critical Components:** [MOST_IMPORTANT_PARTS_TO_TEST]\n- **External Dependencies:** [APIS/DATABASES/SERVICES]\n- **Performance Requirements:** [SPEED/LOAD_EXPECTATIONS]\n\n**Testing Goals:**\n- **Target Coverage:** [DESIRED_COVERAGE_PERCENTAGE]\n- **Test Types Needed:** [UNIT/INTEGRATION/E2E/etc.]\n- **Automation Level:** [HOW_MUCH_TO_AUTOMATE]\n- **CI/CD Integration:** [CONTINUOUS_TESTING_NEEDS]\n\nPlease provide:\n1. **Complete testing pyramid** strategy\n2. **Test types breakdown** (unit, integration, e2e percentages)\n3. **Testing framework recommendations**\n4. **Test organization** and file structure\n5. **Mocking and stubbing** strategy for dependencies\n6. **Continuous testing** integration approach\n7. **Code coverage targets** by component\n8. **Testing best practices** for the team\n9. **Test maintenance** strategy",
+      "category": "Learning and Analysis",
+      "categoryId": "learning-and-analysis",
+      "variables": [
+        "LANGUAGE",
+        "FRAMEWORKS_AND_TOOLS",
+        "NUMBER_OF_DEVELOPERS",
+        "HOW_OFTEN_RELEASES_HAPPEN",
+        "QUALITY_STANDARDS",
+        "WHAT_TESTS_ALREADY_EXIST",
+        "COVERAGE_PERCENTAGE",
+        "CURRENT_TESTING_CHALLENGES",
+        "AVAILABLE_TIME_FOR_TESTING",
+        "MOST_IMPORTANT_PARTS_TO_TEST",
+        "DESIRED_COVERAGE_PERCENTAGE",
+        "HOW_MUCH_TO_AUTOMATE",
+        "CONTINUOUS_TESTING_NEEDS"
+      ],
+      "tags": [
+        "learning and analysis",
+        "coding",
+        "testing",
+        "planning"
+      ]
+    },
+    {
+      "id": "rhyme-scheme-developer",
+      "title": "Rhyme Scheme Developer",
+      "purpose": "To develop effective rhyme schemes and improve lyrical flow.",
+      "template": "Help me develop a rhyme scheme for my song lyrics. Act as a professional lyricist and poetry expert.\n\n**Song Details:**\n- **Genre:** [GENRE]\n- **Theme:** [SONG_THEME]\n- **Mood:** [EMOTIONAL_TONE]\n- **Target Verse Length:** [NUMBER_OF_LINES] lines per verse\n- **Chorus Length:** [NUMBER_OF_LINES] lines\n\n**Current Lyrics (if any):**",
+      "category": "Learning and Analysis",
+      "categoryId": "learning-and-analysis",
+      "variables": [
+        "GENRE",
+        "SONG_THEME",
+        "EMOTIONAL_TONE",
+        "NUMBER_OF_LINES"
+      ],
+      "tags": [
+        "learning and analysis",
+        "refactoring",
+        "lyrics",
+        "rhyming"
+      ]
+    },
+    {
+      "id": "song-theme-and-story-developer",
+      "title": "Song Theme and Story Developer",
+      "purpose": "To develop compelling themes and narratives for songs.",
+      "template": "Help me develop a compelling theme and story for a song. Act as a narrative songwriter and storytelling expert.\n\n**Initial Concept:**\n[BRIEF_DESCRIPTION_OF_YOUR_SONG_IDEA_OR_INSPIRATION]\n\n**Song Parameters:**\n- **Genre:** [MUSICAL_GENRE]\n- **Length:** [APPROXIMATE_SONG_LENGTH]\n- **Target Audience:** [WHO_SHOULD_CONNECT_WITH_THIS_SONG]\n- **Emotional Journey:** [WHERE_SONG_STARTS_AND_ENDS_EMOTIONALLY]\n\n**Theme Requirements:**\n- **Main Theme:** [CENTRAL_MESSAGE_OR_CONCEPT]\n- **Universal Appeal:** [HOW_OTHERS_CAN_RELATE]\n- **Personal Connection:** [WHY_THIS_MATTERS_TO_YOU]\n- **Originality:** [HOW_TO_MAKE_IT_UNIQUE]\n\n**Story Elements:**\n- **Perspective:** [1ST_PERSON/3RD_PERSON/MULTIPLE]\n- **Time Frame:** [SINGLE_MOMENT/JOURNEY/LIFETIME]\n- **Setting:** [WHERE_AND_WHEN_STORY_TAKES_PLACE]\n- **Characters:** [WHO_IS_INVOLVED]\n\n**Emotional Requirements:**\n- **Starting Emotion:** [HOW_SONG_BEGINS]\n- **Climax Emotion:** [PEAK_EMOTIONAL_MOMENT]\n- **Resolution:** [HOW_SONG_CONCLUDES]\n- **Emotional Complexity:** [SIMPLE/LAYERED/CONFLICTED]\n\n**Constraints:**\n- **Avoid:** [CLICHES_OR_TOPICS_TO_AVOID]\n- **Include:** [ELEMENTS_THAT_MUST_BE_PRESENT]\n- **Tone Limitations:** [CONTENT_APPROPRIATENESS]\n\nPlease provide:\n1. **Detailed theme development** with layers of meaning\n2. **Complete story arc** for the song\n3. **Character development** (if applicable)\n4. **Scene-by-scene breakdown** for verses/chorus/bridge\n5. **Emotional progression** through the song\n6. **Unique angles** that differentiate from similar songs\n7. **Universal connection points** for broad appeal\n8. **Potential metaphors and imagery** to support the theme",
+      "category": "Learning and Analysis",
+      "categoryId": "learning-and-analysis",
+      "variables": [
+        "BRIEF_DESCRIPTION_OF_YOUR_SONG_IDEA_OR_INSPIRATION",
+        "MUSICAL_GENRE",
+        "APPROXIMATE_SONG_LENGTH",
+        "WHO_SHOULD_CONNECT_WITH_THIS_SONG",
+        "WHERE_SONG_STARTS_AND_ENDS_EMOTIONALLY",
+        "CENTRAL_MESSAGE_OR_CONCEPT",
+        "HOW_OTHERS_CAN_RELATE",
+        "WHY_THIS_MATTERS_TO_YOU",
+        "HOW_TO_MAKE_IT_UNIQUE",
+        "WHERE_AND_WHEN_STORY_TAKES_PLACE",
+        "WHO_IS_INVOLVED",
+        "HOW_SONG_BEGINS",
+        "PEAK_EMOTIONAL_MOMENT",
+        "HOW_SONG_CONCLUDES",
+        "CLICHES_OR_TOPICS_TO_AVOID",
+        "ELEMENTS_THAT_MUST_BE_PRESENT",
+        "CONTENT_APPROPRIATENESS"
+      ],
+      "tags": [
+        "learning and analysis",
+        "lyrics",
+        "storytelling"
+      ]
+    },
+    {
+      "id": "genre-specific-song-structure",
+      "title": "Genre-Specific Song Structure",
+      "purpose": "To create song structures optimized for specific musical genres.",
+      "template": "Create an optimal song structure for a [GENRE] song. Act as a music producer and genre specialist.\n\n**Song Specifications:**\n- **Genre:** [SPECIFIC_GENRE] (be as specific as possible)\n- **Sub-genre/Style:** [STYLE_VARIATIONS] if applicable\n- **Target Duration:** [SONG_LENGTH] (radio edit, album track, etc.)\n- **Commercial Goals:** [RADIO_FRIENDLY/ARTISTIC/STREAMING_OPTIMIZED]\n\n**Song Content:**\n- **Theme:** [SONG_THEME_OR_CONCEPT]\n- **Energy Level:** [LOW/MEDIUM/HIGH/VARIABLE]\n- **Vocal Style:** [VOCAL_APPROACH]\n- **Instrumental Focus:** [KEY_INSTRUMENTS_OR_SOUNDS]\n\n**Structure Preferences:**\n- **Complexity:** [SIMPLE/STANDARD/COMPLEX]\n- **Hook Placement:** [WHERE_MAIN_HOOKS_SHOULD_BE]\n- **Dynamic Range:** [CONSISTENT/BUILDING/VARIED]\n- **Repetition Tolerance:** [HOW_MUCH_REPETITION_IS_ACCEPTABLE]\n\n**Commercial Considerations:**\n- **Streaming Optimization:** [EARLY_HOOK_PLACEMENT]\n- **Radio Requirements:** [TIME_CONSTRAINTS]\n- **Live Performance:** [CONCERT_SUITABILITY]\n- **Dance/Movement:** [GROOVE_REQUIREMENTS]\n\n**Reference Points:**\n- **Similar Artists:** [ARTISTS_IN_GENRE] (optional)\n- **Successful Songs:** [REFERENCE_TRACKS] (optional)\n- **Avoid Comparisons to:** [SONGS_TO_DIFFERENTIATE_FROM]\n\nPlease provide:\n1. **Detailed song structure** with timing estimates\n2. **Section-by-section purpose** and energy mapping\n3. **Genre-specific conventions** to follow or break\n4. **Hook and catchiness strategies** for the genre\n5. **Bridge and breakdown** recommendations\n6. **Intro and outro** considerations\n7. **Variation suggestions** for different song goals\n8. **Production notes** relevant to structure",
+      "category": "Learning and Analysis",
+      "categoryId": "learning-and-analysis",
+      "variables": [
+        "GENRE",
+        "SPECIFIC_GENRE",
+        "STYLE_VARIATIONS",
+        "SONG_LENGTH",
+        "SONG_THEME_OR_CONCEPT",
+        "VOCAL_APPROACH",
+        "KEY_INSTRUMENTS_OR_SOUNDS",
+        "WHERE_MAIN_HOOKS_SHOULD_BE",
+        "HOW_MUCH_REPETITION_IS_ACCEPTABLE",
+        "EARLY_HOOK_PLACEMENT",
+        "TIME_CONSTRAINTS",
+        "CONCERT_SUITABILITY",
+        "GROOVE_REQUIREMENTS",
+        "ARTISTS_IN_GENRE",
+        "REFERENCE_TRACKS",
+        "SONGS_TO_DIFFERENTIATE_FROM"
+      ],
+      "tags": [
+        "learning and analysis",
+        "optimization",
+        "lyrics",
+        "genre",
+        "structure",
+        "generation"
+      ]
+    },
+    {
+      "id": "dialogue-writing-specialist",
+      "title": "Dialogue Writing Specialist",
+      "purpose": "To create authentic, character-driven dialogue.",
+      "template": "Create authentic dialogue for my story. Act as a dialogue coach and character voice specialist.\n\n**Scene Context:**\n- **Setting:** [WHERE_AND_WHEN_SCENE_TAKES_PLACE]\n- **Situation:** [WHAT_IS_HAPPENING_IN_THE_SCENE]\n- **Purpose:** [WHAT_THE_SCENE_NEEDS_TO_ACCOMPLISH]\n- **Tone:** [SERIOUS/HUMOROUS/TENSE/ROMANTIC/etc.]\n\n**Characters in Scene:**\n- **Character 1:** [NAME] - [BRIEF_DESCRIPTION_AND_MOTIVATION]\n- **Character 2:** [NAME] - [BRIEF_DESCRIPTION_AND_MOTIVATION]\n- **Additional Characters:** [OTHER_SPEAKERS] if applicable\n\n**Character Voices:**\n- **[CHARACTER_1_NAME] speaks:** [SPEAKING_STYLE_DESCRIPTION]\n- **[CHARACTER_2_NAME] speaks:** [SPEAKING_STYLE_DESCRIPTION]\n- **Relationship Dynamic:** [HOW_CHARACTERS_RELATE_TO_EACH_OTHER]\n\n**Dialogue Requirements:**\n- **Information to Convey:** [WHAT_READERS_NEED_TO_LEARN]\n- **Subtext:** [WHAT_CHARACTERS_AREN'T_SAYING_DIRECTLY]\n- **Conflict/Tension:** [SOURCE_OF_DRAMATIC_TENSION]\n- **Character Development:** [HOW_CHARACTERS_SHOULD_GROW]\n\n**Style Preferences:**\n- **Realism Level:** [NATURALISTIC/STYLIZED/HEIGHTENED]\n- **Dialect/Accent:** [SPEECH_PATTERNS_TO_INCLUDE]\n- **Time Period:** [HISTORICAL_LANGUAGE_CONSIDERATIONS]\n- **Genre Conventions:** [DIALOGUE_STYLE_FOR_GENRE]\n\n**Constraints:**\n- **Length:** [APPROXIMATE_WORD_COUNT]\n- **Content Rating:** [APPROPRIATE_LANGUAGE_LEVEL]\n- **Avoid:** [SPECIFIC_SPEECH_PATTERNS_TO_AVOID]\n\nPlease provide:\n1. **Complete dialogue scene** with action beats\n2. **Character voice differentiation** clearly shown\n3. **Subtext and layers** of meaning\n4. **Natural speech patterns** and interruptions\n5. **Emotional progression** through the conversation\n6. **Dialogue tags and action** integration\n7. **Revision suggestions** for authenticity",
+      "category": "Learning and Analysis",
+      "categoryId": "learning-and-analysis",
+      "variables": [
+        "WHERE_AND_WHEN_SCENE_TAKES_PLACE",
+        "WHAT_IS_HAPPENING_IN_THE_SCENE",
+        "WHAT_THE_SCENE_NEEDS_TO_ACCOMPLISH",
+        "NAME",
+        "BRIEF_DESCRIPTION_AND_MOTIVATION",
+        "OTHER_SPEAKERS",
+        "CHARACTER_1_NAME",
+        "SPEAKING_STYLE_DESCRIPTION",
+        "CHARACTER_2_NAME",
+        "HOW_CHARACTERS_RELATE_TO_EACH_OTHER",
+        "WHAT_READERS_NEED_TO_LEARN",
+        "SOURCE_OF_DRAMATIC_TENSION",
+        "HOW_CHARACTERS_SHOULD_GROW",
+        "SPEECH_PATTERNS_TO_INCLUDE",
+        "HISTORICAL_LANGUAGE_CONSIDERATIONS",
+        "DIALOGUE_STYLE_FOR_GENRE",
+        "APPROXIMATE_WORD_COUNT",
+        "APPROPRIATE_LANGUAGE_LEVEL",
+        "SPECIFIC_SPEECH_PATTERNS_TO_AVOID"
+      ],
+      "tags": [
+        "learning and analysis",
+        "characters",
+        "generation"
+      ]
+    },
+    {
+      "id": "scene-setting-and-atmosphere",
+      "title": "Scene Setting and Atmosphere",
+      "purpose": "To create vivid, immersive scene descriptions and atmospheric writing.",
+      "template": "Create vivid scene descriptions and atmosphere for my story. Act as a descriptive writing expert.\n\n**Scene Requirements:**\n- **Location:** [SPECIFIC_SETTING_DESCRIPTION]\n- **Time Period:** [WHEN_SCENE_TAKES_PLACE]\n- **Time of Day/Season:** [TEMPORAL_CONTEXT]\n- **Weather/Climate:** [ATMOSPHERIC_CONDITIONS]\n\n**Mood and Atmosphere:**\n- **Desired Mood:** [EMOTIONAL_ATMOSPHERE]\n- **Genre Tone:** [GENRE_SPECIFIC_ATMOSPHERE]\n- **Symbolic Elements:** [WHAT_SETTING_SHOULD_REPRESENT]\n- **Foreshadowing:** [HINTS_ABOUT_FUTURE_EVENTS]\n\n**Sensory Details:**\n- **Visual Elements:** [WHAT_CHARACTERS_AND_READERS_SEE]\n- **Sounds:** [AUDIO_LANDSCAPE]\n- **Smells:** [SCENTS_AND_ODORS]\n- **Textures:** [THINGS_CHARACTERS_MIGHT_TOUCH]\n- **Tastes:** [IF_APPLICABLE]\n\n**Character Interaction:**\n- **POV Character:** [WHO_IS_EXPERIENCING_THE_SCENE]\n- **Character's Emotional State:** [HOW_EMOTIONS_AFFECT_PERCEPTION]\n- **Physical Position:** [WHERE_CHARACTER_IS_IN_THE_SPACE]\n- **Movement:** [HOW_CHARACTER_MOVES_THROUGH_SPACE]\n\n**Story Function:**\n- **Plot Purpose:** [HOW_SETTING_SERVES_THE_STORY]\n- **Character Development:** [WHAT_SETTING_REVEALS_ABOUT_CHARACTERS]\n- **Theme Connection:** [HOW_SETTING_SUPPORTS_THEMES]\n- **Pacing:** [FAST/SLOW/CONTEMPLATIVE_DESCRIPTION]\n\n**Style Preferences:**\n- **Description Length:** [BRIEF/MODERATE/DETAILED]\n- **Language Style:** [SIMPLE/LYRICAL/TECHNICAL]\n- **Metaphor Use:** [MINIMAL/MODERATE/EXTENSIVE]\n\nPlease provide:\n1. **Complete scene description** with rich sensory details\n2. **Atmospheric elements** that support mood\n3. **Character integration** with the environment\n4. **Symbolic and thematic** connections\n5. **Pacing and rhythm** appropriate for scene\n6. **Unique details** that make setting memorable\n7. **Revision suggestions** for enhancement",
+      "category": "Learning and Analysis",
+      "categoryId": "learning-and-analysis",
+      "variables": [
+        "SPECIFIC_SETTING_DESCRIPTION",
+        "WHEN_SCENE_TAKES_PLACE",
+        "TEMPORAL_CONTEXT",
+        "ATMOSPHERIC_CONDITIONS",
+        "EMOTIONAL_ATMOSPHERE",
+        "GENRE_SPECIFIC_ATMOSPHERE",
+        "WHAT_SETTING_SHOULD_REPRESENT",
+        "HINTS_ABOUT_FUTURE_EVENTS",
+        "WHAT_CHARACTERS_AND_READERS_SEE",
+        "AUDIO_LANDSCAPE",
+        "SCENTS_AND_ODORS",
+        "THINGS_CHARACTERS_MIGHT_TOUCH",
+        "IF_APPLICABLE",
+        "WHO_IS_EXPERIENCING_THE_SCENE",
+        "HOW_EMOTIONS_AFFECT_PERCEPTION",
+        "WHERE_CHARACTER_IS_IN_THE_SPACE",
+        "HOW_CHARACTER_MOVES_THROUGH_SPACE",
+        "HOW_SETTING_SERVES_THE_STORY",
+        "WHAT_SETTING_REVEALS_ABOUT_CHARACTERS",
+        "HOW_SETTING_SUPPORTS_THEMES"
+      ],
+      "tags": [
+        "learning and analysis",
+        "scenes",
+        "generation"
+      ]
+    },
+    {
+      "id": "marketing-copy-creator",
+      "title": "Marketing Copy Creator",
+      "purpose": "To create compelling marketing copy for various purposes.",
+      "template": "Create compelling marketing copy for [PRODUCT/SERVICE/CAMPAIGN]. Act as a copywriting expert and marketing strategist.\n\n**Product/Service Details:**\n- **Name:** [PRODUCT_OR_SERVICE_NAME]\n- **Category:** [WHAT_TYPE_OF_OFFERING]\n- **Key Features:** [TOP_3_FEATURES_OR_BENEFITS]\n- **Unique Selling Proposition:** [WHAT_MAKES_IT_DIFFERENT]\n- **Price Point:** [COST_RANGE_OR_STRATEGY]\n\n**Target Audience:**\n- **Primary Audience:** [DETAILED_DEMOGRAPHIC_DESCRIPTION]\n- **Pain Points:** [PROBLEMS_AUDIENCE_FACES]\n- **Motivations:** [WHAT_DRIVES_PURCHASE_DECISIONS]\n- **Communication Style:** [HOW_AUDIENCE_PREFERS_TO_BE_ADDRESSED]\n\n**Marketing Goals:**\n- **Primary Objective:** [AWARENESS/CONVERSION/RETENTION/etc.]\n- **Call to Action:** [WHAT_AUDIENCE_SHOULD_DO]\n- **Success Metrics:** [HOW_SUCCESS_WILL_BE_MEASURED]\n- **Campaign Duration:** [TIMELINE_CONSIDERATIONS]\n\n**Copy Requirements:**\n- **Format:** [EMAIL/WEBPAGE/AD/SOCIAL_POST/BROCHURE/etc.]\n- **Length:** [WORD_COUNT_OR_CHARACTER_LIMITS]\n- **Tone:** [PROFESSIONAL/CASUAL/URGENT/FRIENDLY/etc.]\n- **Brand Voice:** [BRAND_PERSONALITY_DESCRIPTION]\n\n**Competition and Context:**\n- **Competitive Advantage:** [HOW_TO_POSITION_AGAINST_COMPETITORS]\n- **Market Context:** [CURRENT_MARKET_CONDITIONS]\n- **Seasonal Factors:** [TIMING_CONSIDERATIONS]\n\n**Constraints:**\n- **Legal Requirements:** [DISCLAIMERS_OR_COMPLIANCE_NEEDS]\n- **Brand Guidelines:** [STYLE_OR_MESSAGING_RESTRICTIONS]\n- **Budget Implications:** [COST_MESSAGING_CONSIDERATIONS]\n\nPlease provide:\n1. **Compelling headline** and subheadings\n2. **Feature-benefit translations** for key points\n3. **Emotional appeal** elements\n4. **Social proof** suggestions (testimonials, reviews)\n5. **Clear call-to-action** copy\n6. **Urgency and scarcity** elements (if appropriate)\n7. **A/B testing variations** for key elements\n8. **SEO considerations** (if web copy)",
+      "category": "Learning and Analysis",
+      "categoryId": "learning-and-analysis",
+      "variables": [
+        "PRODUCT_OR_SERVICE_NAME",
+        "WHAT_TYPE_OF_OFFERING",
+        "TOP_3_FEATURES_OR_BENEFITS",
+        "WHAT_MAKES_IT_DIFFERENT",
+        "COST_RANGE_OR_STRATEGY",
+        "DETAILED_DEMOGRAPHIC_DESCRIPTION",
+        "PROBLEMS_AUDIENCE_FACES",
+        "WHAT_DRIVES_PURCHASE_DECISIONS",
+        "HOW_AUDIENCE_PREFERS_TO_BE_ADDRESSED",
+        "WHAT_AUDIENCE_SHOULD_DO",
+        "HOW_SUCCESS_WILL_BE_MEASURED",
+        "TIMELINE_CONSIDERATIONS",
+        "WORD_COUNT_OR_CHARACTER_LIMITS",
+        "BRAND_PERSONALITY_DESCRIPTION",
+        "HOW_TO_POSITION_AGAINST_COMPETITORS",
+        "CURRENT_MARKET_CONDITIONS",
+        "TIMING_CONSIDERATIONS",
+        "DISCLAIMERS_OR_COMPLIANCE_NEEDS",
+        "STYLE_OR_MESSAGING_RESTRICTIONS",
+        "COST_MESSAGING_CONSIDERATIONS"
+      ],
+      "tags": [
+        "learning and analysis",
+        "business",
+        "generation"
+      ]
+    },
+    {
+      "id": "technical-documentation-writer",
+      "title": "Technical Documentation Writer",
+      "purpose": "To create clear, comprehensive technical documentation.",
+      "template": "Create technical documentation for [SYSTEM/PROCESS/TOOL]. Act as a technical writing expert.\n\n**Documentation Subject:**\n- **Product/System:** [WHAT_NEEDS_DOCUMENTATION]\n- **Version:** [VERSION_NUMBER_OR_CURRENT_STATE]\n- **Complexity Level:** [SIMPLE/MODERATE/COMPLEX]\n- **Update Frequency:** [HOW_OFTEN_DOCS_NEED_UPDATES]\n\n**Target Audience:**\n- **Primary Users:** [DEVELOPERS/ADMINS/END_USERS/etc.]\n- **Technical Level:** [BEGINNER/INTERMEDIATE/EXPERT]\n- **Use Cases:** [HOW_AUDIENCE_WILL_USE_DOCUMENTATION]\n- **Time Constraints:** [TYPICAL_TIME_PRESSURE_FOR_USERS]\n\n**Documentation Scope:**\n- **Getting Started:** [INSTALLATION/SETUP_NEEDS]\n- **Core Features:** [MAIN_FUNCTIONALITY_TO_DOCUMENT]\n- **Advanced Features:** [COMPLEX_OR_OPTIONAL_FUNCTIONALITY]\n- **Troubleshooting:** [COMMON_ISSUES_AND_SOLUTIONS]\n- **Integration:** [HOW_IT_WORKS_WITH_OTHER_SYSTEMS]\n\n**Format Requirements:**\n- **Documentation Type:** [README/WIKI/API_DOCS/USER_MANUAL/etc.]\n- **Platform:** [WHERE_DOCS_WILL_BE_HOSTED]\n- **Interactivity:** [STATIC/INTERACTIVE/LIVE_EXAMPLES]\n- **Media:** [TEXT_ONLY/SCREENSHOTS/VIDEOS/DIAGRAMS]\n\n**Content Structure:**\n- **Organization:** [HIERARCHICAL/SEQUENTIAL/MODULAR]\n- **Navigation:** [TABLE_OF_CONTENTS/SEARCH/CROSS_REFERENCES]\n- **Code Examples:** [LANGUAGE_AND_STYLE_PREFERENCES]\n- **Screenshots:** [WHEN_AND_HOW_TO_USE_VISUALS]\n\n**Maintenance:**\n- **Version Control:** [HOW_TO_TRACK_CHANGES]\n- **Review Process:** [WHO_VALIDATES_ACCURACY]\n- **Feedback Collection:** [HOW_USERS_CAN_SUGGEST_IMPROVEMENTS]\n\nPlease provide:\n1. **Complete documentation structure** and outline\n2. **Clear, step-by-step instructions** for key processes\n3. **Code examples** with explanations\n4. **Troubleshooting section** with common issues\n5. **Quick reference** sections for experienced users\n6. **Visual aids** recommendations (diagrams, screenshots)\n7. **Maintenance strategy** for keeping docs current\n8. **User feedback** integration approach",
+      "category": "Learning and Analysis",
+      "categoryId": "learning-and-analysis",
+      "variables": [
+        "WHAT_NEEDS_DOCUMENTATION",
+        "VERSION_NUMBER_OR_CURRENT_STATE",
+        "HOW_OFTEN_DOCS_NEED_UPDATES",
+        "HOW_AUDIENCE_WILL_USE_DOCUMENTATION",
+        "TYPICAL_TIME_PRESSURE_FOR_USERS",
+        "MAIN_FUNCTIONALITY_TO_DOCUMENT",
+        "COMPLEX_OR_OPTIONAL_FUNCTIONALITY",
+        "COMMON_ISSUES_AND_SOLUTIONS",
+        "HOW_IT_WORKS_WITH_OTHER_SYSTEMS",
+        "WHERE_DOCS_WILL_BE_HOSTED",
+        "LANGUAGE_AND_STYLE_PREFERENCES",
+        "WHEN_AND_HOW_TO_USE_VISUALS",
+        "HOW_TO_TRACK_CHANGES",
+        "WHO_VALIDATES_ACCURACY",
+        "HOW_USERS_CAN_SUGGEST_IMPROVEMENTS"
+      ],
+      "tags": [
+        "learning and analysis",
+        "documentation",
+        "generation"
+      ]
+    },
+    {
+      "id": "prompt-testing-and-validation",
+      "title": "Prompt Testing and Validation",
+      "purpose": "To test and validate prompt effectiveness across different scenarios.",
+      "template": "Help me test and validate the effectiveness of my prompt. Act as a prompt evaluation expert.\n\n**Prompt to Test:**",
+      "category": "Learning and Analysis",
+      "categoryId": "learning-and-analysis",
+      "variables": [],
+      "tags": [
+        "learning and analysis",
+        "testing",
+        "meta"
+      ]
+    },
+    {
+      "id": "domain-specific-prompt-adapter",
+      "title": "Domain-Specific Prompt Adapter",
+      "purpose": "To adapt general prompts for specific domains or industries.",
+      "template": "Adapt this general prompt for the [DOMAIN/INDUSTRY] field. Act as a domain expert and prompt engineering specialist.\n\n**Base Prompt:**",
+      "category": "Learning and Analysis",
+      "categoryId": "learning-and-analysis",
+      "variables": [],
+      "tags": [
+        "learning and analysis",
+        "meta"
+      ]
+    },
+    {
+      "id": "daily-standup-generator",
+      "title": "Daily Standup Generator",
+      "purpose": "Quick template for generating daily standup updates.",
+      "template": "Generate my daily standup update. Focus on clarity and brevity.\n\n**Yesterday's Accomplishments:**\n- [TASK_1_COMPLETED]\n- [TASK_2_COMPLETED]\n- [TASK_3_COMPLETED]\n\n**Today's Goals:**\n- [PRIORITY_1]\n- [PRIORITY_2]\n- [PRIORITY_3]\n\n**Blockers/Challenges:**\n- [BLOCKER_1] - [HELP_NEEDED]\n- [BLOCKER_2] - [HELP_NEEDED]\n\n**Team Dependencies:**\n- [WAITING_FOR] from [TEAM_MEMBER]\n- [PROVIDING_TO] for [TEAM_MEMBER]\n\n**Notes:**\n[ADDITIONAL_CONTEXT_OR_UPDATES]\n\nFormat as a brief, professional standup update.",
+      "category": "Learning and Analysis",
+      "categoryId": "learning-and-analysis",
+      "variables": [
+        "TASK_1_COMPLETED",
+        "TASK_2_COMPLETED",
+        "TASK_3_COMPLETED",
+        "PRIORITY_1",
+        "PRIORITY_2",
+        "PRIORITY_3",
+        "BLOCKER_1",
+        "HELP_NEEDED",
+        "BLOCKER_2",
+        "WAITING_FOR",
+        "TEAM_MEMBER",
+        "PROVIDING_TO",
+        "ADDITIONAL_CONTEXT_OR_UPDATES"
+      ],
+      "tags": [
+        "learning and analysis"
+      ]
+    },
+    {
+      "id": "bug-report-generator",
+      "title": "Bug Report Generator",
+      "purpose": "Comprehensive bug reporting template.",
+      "template": "Create a detailed bug report for this issue. Include all necessary information for developers.\n\n**Bug Summary:**\n[ONE_LINE_DESCRIPTION_OF_THE_BUG]\n\n**Environment:**\n- **Application Version:** [VERSION]\n- **Operating System:** [OS_AND_VERSION]\n- **Browser:** [BROWSER_AND_VERSION] (if applicable)\n- **Device:** [DEVICE_INFO] (if mobile)\n\n**Steps to Reproduce:**\n1. [STEP_1]\n2. [STEP_2]\n3. [STEP_3]\n\n**Expected Behavior:**\n[WHAT_SHOULD_HAPPEN]\n\n**Actual Behavior:**\n[WHAT_ACTUALLY_HAPPENS]\n\n**Error Messages:**",
+      "category": "Learning and Analysis",
+      "categoryId": "learning-and-analysis",
+      "variables": [
+        "ONE_LINE_DESCRIPTION_OF_THE_BUG",
+        "VERSION",
+        "OS_AND_VERSION",
+        "BROWSER_AND_VERSION",
+        "DEVICE_INFO",
+        "STEP_1",
+        "STEP_2",
+        "STEP_3",
+        "WHAT_SHOULD_HAPPEN",
+        "WHAT_ACTUALLY_HAPPENS"
+      ],
+      "tags": [
+        "learning and analysis"
+      ]
+    }
+  ],
+  "metadata": {
+    "totalTemplates": 36,
+    "totalCategories": 5,
+    "generatedAt": "2025-06-20T00:11:18.857Z"
+  }
+}
